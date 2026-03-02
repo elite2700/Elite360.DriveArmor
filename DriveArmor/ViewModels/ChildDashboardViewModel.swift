@@ -198,14 +198,11 @@ final class ChildDashboardViewModel: ObservableObject {
         overrideRequestPending = true
 
         Task {
-            let request = OverrideRequest(
-                id: UUID().uuidString,
+            _ = try? await overrideService.sendOverrideRequest(
+                familyId: familyId,
                 childId: childId,
-                reason: reason,
-                status: .pending,
-                requestedAt: Date()
+                reason: reason
             )
-            try? await overrideService.submitOverrideRequest(request, familyId: familyId)
 
             // Also notify parent via a command document
             _ = try? await commandService.sendCommand(
@@ -240,13 +237,13 @@ final class ChildDashboardViewModel: ObservableObject {
     // MARK: - Gamification
 
     /// Record drive completion for gamification tracking.
-    func recordDriveEnd(wasSafe: Bool) {
+    func recordDriveEnd(log: DrivingLog) {
         guard let familyId = familyId, let childId = childId else { return }
         Task {
-            try? await gamificationService.recordDriveCompletion(
+            _ = try? await gamificationService.recordDriveCompletion(
                 familyId: familyId,
                 childId: childId,
-                wasSafe: wasSafe
+                log: log
             )
         }
     }
@@ -255,7 +252,7 @@ final class ChildDashboardViewModel: ObservableObject {
 
     private func checkSchedules() {
         guard let familyId = familyId else { return }
-        scheduleService.startListening(familyId: familyId)
+        scheduleService.listenToSchedules(familyId: familyId)
 
         // Check schedule status periodically
         Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
