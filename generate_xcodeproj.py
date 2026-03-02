@@ -21,7 +21,7 @@ os.chdir("/workspaces/Elite360.DriveArmor")
 
 swift_files = sorted(glob.glob("DriveArmor/**/*.swift", recursive=True))
 test_files = sorted(glob.glob("DriveArmorTests/**/*.swift", recursive=True))
-resource_files = ["DriveArmor/Resources/GoogleService-Info.plist"]
+resource_files = ["DriveArmor/Resources/GoogleService-Info.plist", "DriveArmor/Resources/Assets.xcassets"]
 
 # Known CocoaPods framework references (from pod install)
 pods_main_fw = "Pods_DriveArmor.framework"
@@ -135,7 +135,11 @@ for f in sorted(swift_files + test_files):
 
 for f in resource_files:
     name = os.path.basename(f)
-    lines.append(f"\t\t{file_refs[f]} /* {name} */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = {name}; sourceTree = \"<group>\"; }};")
+    if f.endswith(".xcassets"):
+        ftype = "folder.assetcatalog"
+    else:
+        ftype = "text.plist.xml"
+    lines.append(f"\t\t{file_refs[f]} /* {name} */ = {{isa = PBXFileReference; lastKnownFileType = {ftype}; path = {name}; sourceTree = \"<group>\"; }};")
 
 lines.append(f"\t\t{PODS_MAIN_FW_UUID} /* {pods_main_fw} */ = {{isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = {pods_main_fw}; sourceTree = BUILT_PRODUCTS_DIR; }};")
 lines.append(f"\t\t{PODS_TEST_FW_UUID} /* {pods_test_fw} */ = {{isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = {pods_test_fw}; sourceTree = BUILT_PRODUCTS_DIR; }};")

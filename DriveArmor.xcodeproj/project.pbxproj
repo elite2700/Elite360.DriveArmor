@@ -61,6 +61,7 @@
 		B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */; };
 		BEA6FA015C9BDB20A19CD360 /* SpeedThresholdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9A0B540A035832F800C15 /* SpeedThresholdView.swift */; };
 		BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */; };
+		AA1234567890ABCD12345678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1234567890ABCD12345678 /* Assets.xcassets */; };
 		C577AB5F7ACD0FBE9AC3FA38 /* ParentDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */; };
 		CF233A2AB53FD49A674920A7 /* CreateFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */; };
 		D0212DE91B1BB09728E9B68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */; };
@@ -96,6 +97,7 @@
 		3CFB6289DD958E920A68F7F6 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		4080A451011EBA6F0EB08227 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB1234567890ABCD12345678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4897E02901E0468D9FC84518 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 		4B02745936D577297F12415A /* Pods_DriveArmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B87C85643CBC4A2ECCCF50B /* Pods_DriveArmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */,
+				BB1234567890ABCD12345678 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */,
+				AA1234567890ABCD12345678 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
