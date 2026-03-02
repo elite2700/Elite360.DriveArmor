@@ -40,29 +40,29 @@ struct ScheduleListView: View {
         }
         .sheet(isPresented: $showAddSheet) {
             NavigationStack {
-                ScheduleEditorView { schedule in
+                ScheduleEditorView(createdBy: appState.userId ?? "") { schedule in
                     Task {
-                        try? await service.addSchedule(schedule, familyId: appState.familyId ?? "")
+                        try? await service.createSchedule(familyId: appState.familyId ?? "", schedule: schedule)
                     }
                 }
             }
         }
         .task {
             guard let fId = appState.familyId else { return }
-            service.startListening(familyId: fId)
+            service.listenToSchedules(familyId: fId)
         }
     }
 
     private func toggleSchedule(_ s: SafeModeSchedule) async {
         var updated = s
         updated.isEnabled.toggle()
-        try? await service.updateSchedule(updated, familyId: appState.familyId ?? "")
+        try? await service.updateSchedule(familyId: appState.familyId ?? "", schedule: updated)
     }
 
     private func deleteSchedules(at offsets: IndexSet) async {
         for i in offsets {
             let s = service.schedules[i]
-            try? await service.deleteSchedule(s, familyId: appState.familyId ?? "")
+            try? await service.deleteSchedule(familyId: appState.familyId ?? "", scheduleId: s.id)
         }
     }
 }
@@ -72,8 +72,6 @@ struct ScheduleListView: View {
 private struct ScheduleRow: View {
     let schedule: SafeModeSchedule
     let onToggle: () -> Void
-
-    private static let dayAbbreviations = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
     var body: some View {
         HStack {
@@ -98,33 +96,31 @@ private struct ScheduleRow: View {
     }
 
     private var timeRange: String {
-        "\(schedule.startTime) – \(schedule.endTime)"
+        "\(schedule.startTimeString) \u{2013} \(schedule.endTimeString)"
     }
 
     private var daysList: String {
-        schedule.daysOfWeek
+        let dayAbbr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        return schedule.daysOfWeek
             .sorted()
-            .map { Self.dayAbbreviations[safe: $0] ?? "?" }
+            .compactMap { day in (1...7).contains(day) ? dayAbbr[day - 1] : nil }
             .joined(separator: ", ")
-    }
-}
-
-private extension Array {
-    subscript(safe index: Int) -> Element? {
-        indices.contains(index) ? self[index] : nil
     }
 }
 
 // MARK: - Editor
 
 struct ScheduleEditorView: View {
+    let createdBy: String
     let onSave: (SafeModeSchedule) -> Void
 
     @Environment(\.dismiss) private var dismiss
     @State private var name = ""
-    @State private var startTime = "08:00"
-    @State private var endTime = "15:00"
-    @State private var selectedDays: Set<Int> = [1, 2, 3, 4, 5] // Mon-Fri
+    @State private var startHour = 8
+    @State private var startMinute = 0
+    @State private var endHour = 15
+    @State private var endMinute = 0
+    @State private var selectedDays: Set<Int> = [2, 3, 4, 5, 6] // Mon-Fri (1=Sun)
 
     private let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
@@ -132,15 +128,15 @@ struct ScheduleEditorView: View {
         Form {
             Section("Schedule Info") {
                 TextField("Name (e.g. School hours)", text: $name)
-                TextField("Start Time (HH:mm)", text: $startTime)
-                    .keyboardType(.numbersAndPunctuation)
-                TextField("End Time (HH:mm)", text: $endTime)
-                    .keyboardType(.numbersAndPunctuation)
+                Stepper("Start Hour: \(startHour)", value: $startHour, in: 0...23)
+                Stepper("Start Minute: \(startMinute)", value: $startMinute, in: 0...59)
+                Stepper("End Hour: \(endHour)", value: $endHour, in: 0...23)
+                Stepper("End Minute: \(endMinute)", value: $endMinute, in: 0...59)
             }
 
             Section("Days of Week") {
-                ForEach(0..<7, id: \.self) { day in
-                    Toggle(dayNames[day], isOn: Binding(
+                ForEach(1..<8, id: \.self) { day in
+                    Toggle(dayNames[day - 1], isOn: Binding(
                         get: { selectedDays.contains(day) },
                         set: { isOn in
                             if isOn { selectedDays.insert(day) }
@@ -170,11 +166,13 @@ struct ScheduleEditorView: View {
         let schedule = SafeModeSchedule(
             id: UUID().uuidString,
             name: name,
-            startTime: startTime,
-            endTime: endTime,
+            startHour: startHour,
+            startMinute: startMinute,
+            endHour: endHour,
+            endMinute: endMinute,
             daysOfWeek: Array(selectedDays),
             isEnabled: true,
-            createdAt: Date()
+            createdBy: createdBy
         )
         onSave(schedule)
     }

@@ -46,9 +46,9 @@ struct GeofenceListView: View {
         }
         .sheet(isPresented: $showAddSheet) {
             NavigationStack {
-                GeofenceEditorView(familyId: appState.familyId ?? "") { newFence in
+                GeofenceEditorView(familyId: appState.familyId ?? "", createdBy: appState.userId ?? "") { newFence in
                     Task {
-                        try? await service.addGeofence(newFence, familyId: appState.familyId ?? "")
+                        try? await service.createGeofence(familyId: appState.familyId ?? "", geofence: newFence)
                     }
                 }
             }
@@ -57,30 +57,31 @@ struct GeofenceListView: View {
             NavigationStack {
                 GeofenceEditorView(
                     familyId: appState.familyId ?? "",
+                    createdBy: appState.userId ?? "",
                     existing: fence
                 ) { updated in
                     Task {
-                        try? await service.updateGeofence(updated, familyId: appState.familyId ?? "")
+                        try? await service.updateGeofence(familyId: appState.familyId ?? "", geofence: updated)
                     }
                 }
             }
         }
         .task {
             guard let fId = appState.familyId else { return }
-            service.startListening(familyId: fId)
+            service.listenToGeofences(familyId: fId)
         }
     }
 
     private func toggleFence(_ fence: GeofenceModel) async {
         var updated = fence
         updated.isEnabled.toggle()
-        try? await service.updateGeofence(updated, familyId: appState.familyId ?? "")
+        try? await service.updateGeofence(familyId: appState.familyId ?? "", geofence: updated)
     }
 
     private func deleteFences(at offsets: IndexSet) async {
         for index in offsets {
             let fence = service.geofences[index]
-            try? await service.deleteGeofence(fence, familyId: appState.familyId ?? "")
+            try? await service.deleteGeofence(familyId: appState.familyId ?? "", geofenceId: fence.id)
         }
     }
 }
@@ -124,6 +125,7 @@ private struct GeofenceRow: View {
 
 struct GeofenceEditorView: View {
     let familyId: String
+    let createdBy: String
     var existing: GeofenceModel?
     let onSave: (GeofenceModel) -> Void
 
@@ -192,6 +194,7 @@ struct GeofenceEditorView: View {
             notifyOnEntry: notifyEntry,
             notifyOnExit: notifyExit,
             isEnabled: existing?.isEnabled ?? true,
+            createdBy: existing?.createdBy ?? createdBy,
             createdAt: existing?.createdAt ?? Date()
         )
         onSave(fence)
