@@ -60,6 +60,12 @@ struct CreateFamilyView: View {
                         .font(.system(.largeTitle, design: .monospaced).bold())
                         .kerning(6)
                         .foregroundStyle(.accent)
+
+                    NavigationLink("Show QR Code") {
+                        QRCodePairingView(pairingCode: viewModel.pairingCode)
+                    }
+                    .font(.subheadline)
+                    .padding(.top, 4)
                 }
                 .padding()
                 .background(

@@ -34,6 +34,41 @@ struct ParentDashboardView: View {
                     PairingCodeBanner(code: code)
                 }
 
+                // MARK: - Quick Actions Grid
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                    QuickActionCard(icon: "mappin.and.ellipse", title: "Geofences", color: .blue) {
+                        NavigationLink(destination: GeofenceListView()) {
+                            EmptyView()
+                        }
+                    }
+                    QuickActionCard(icon: "clock.badge.checkmark", title: "Schedules", color: .purple) {
+                        NavigationLink(destination: ScheduleListView()) {
+                            EmptyView()
+                        }
+                    }
+                    QuickActionCard(icon: "speedometer", title: "Speed Alerts", color: .orange) {
+                        NavigationLink(destination: SpeedThresholdView()) {
+                            EmptyView()
+                        }
+                    }
+                    QuickActionCard(icon: "hand.raised.fill", title: "Override Requests", color: .red) {
+                        NavigationLink(destination: OverrideRequestsView()) {
+                            EmptyView()
+                        }
+                    }
+                    QuickActionCard(icon: "doc.badge.gearshape", title: "Rule Changes", color: .teal) {
+                        NavigationLink(destination: RuleChangeRequestView()) {
+                            EmptyView()
+                        }
+                    }
+                    QuickActionCard(icon: "qrcode", title: "QR Pairing", color: .indigo) {
+                        NavigationLink(destination: QRCodePairingView(pairingCode: appState.currentFamily?.pairingCode ?? "")) {
+                            EmptyView()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+
                 // MARK: - Children List
                 if viewModel.children.isEmpty && !viewModel.isLoading {
                     ContentUnavailableView(
@@ -183,5 +218,34 @@ private struct StatusBadge: View {
     NavigationStack {
         ParentDashboardView()
             .environmentObject(AppState())
+    }
+}
+
+// MARK: - Quick Action Card
+
+private struct QuickActionCard<Destination: View>: View {
+    let icon: String
+    let title: String
+    let color: Color
+    @ViewBuilder let destination: () -> Destination
+
+    var body: some View {
+        ZStack {
+            destination()
+            VStack(spacing: 8) {
+                Image(systemName: icon)
+                    .font(.title2)
+                    .foregroundStyle(color)
+                Text(title)
+                    .font(.caption.bold())
+                    .foregroundStyle(.primary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 16)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(color.opacity(0.08))
+            )
+        }
     }
 }

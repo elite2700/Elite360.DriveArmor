@@ -10,8 +10,10 @@ struct SettingsView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = SettingsViewModel()
     @State private var showSignOutConfirm = false
+    @State private var showRoleSwitchConfirm = false
 
     private var isParent: Bool { appState.currentUser?.role == .parent }
+    private var targetRole: UserRole { isParent ? .child : .parent }
 
     var body: some View {
         Form {
@@ -79,6 +81,37 @@ struct SettingsView: View {
                 }
             }
 
+            // MARK: - Subscription
+            Section("Subscription") {
+                NavigationLink(destination: SubscriptionView()) {
+                    Label("Manage Subscription", systemImage: "crown.fill")
+                }
+            }
+
+            // MARK: - Security
+            Section("Security") {
+                if viewModel.biometricType != .none {
+                    Toggle(isOn: $viewModel.biometricEnabled) {
+                        Label(
+                            viewModel.biometricType == .faceID ? "Face ID Lock" : "Touch ID Lock",
+                            systemImage: viewModel.biometricType == .faceID ? "faceid" : "touchid"
+                        )
+                    }
+                    .onChange(of: viewModel.biometricEnabled) { _, _ in
+                        Task { await viewModel.toggleBiometric() }
+                    }
+                }
+            }
+
+            // MARK: - Role Switching
+            Section("Advanced") {
+                Button {
+                    showRoleSwitchConfirm = true
+                } label: {
+                    Label("Switch to \(targetRole.rawValue.capitalized) Mode", systemImage: "arrow.left.arrow.right")
+                }
+            }
+
             // MARK: - Sign Out
             Section {
                 Button(role: .destructive) {
@@ -99,6 +132,17 @@ struct SettingsView: View {
             Button("Sign Out", role: .destructive) {
                 viewModel.signOut(appState: appState)
             }
+        }
+        .confirmationDialog(
+            "Switch to \(targetRole.rawValue.capitalized) mode?",
+            isPresented: $showRoleSwitchConfirm
+        ) {
+            Button("Switch Role") {
+                Task { await viewModel.switchRole(appState: appState, to: targetRole) }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This will change your role. You may need to re-pair with a family.")
         }
         .alert("Error", isPresented: $viewModel.showError) {
             Button("OK", role: .cancel) {}

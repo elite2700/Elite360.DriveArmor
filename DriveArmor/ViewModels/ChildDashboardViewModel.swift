@@ -18,6 +18,7 @@ final class ChildDashboardViewModel: ObservableObject {
     @Published var parentMessage: String?
     @Published var errorMessage: String?
     @Published var showError: Bool = false
+    @Published var overrideRequestPending: Bool = false
 
     // MARK: - Services
 
@@ -26,6 +27,9 @@ final class ChildDashboardViewModel: ObservableObject {
     private let commandService = CommandService()
     private let statusService = DeviceStatusService()
     private let notificationService = NotificationService()
+    private let overrideService = OverrideRequestService()
+    private let gamificationService = GamificationService()
+    private let scheduleService = ScheduleService()
 
     // MARK: - Private
 
@@ -78,6 +82,9 @@ final class ChildDashboardViewModel: ObservableObject {
 
         // Listen for parent commands
         listenForCommands()
+
+        // Check for active schedules
+        checkSchedules()
 
         // Periodically push device status
         startStatusUpdates()
@@ -134,6 +141,10 @@ final class ChildDashboardViewModel: ObservableObject {
                     title: "Safe Mode Disabled",
                     body: "Safe mode has been turned off by your parent."
                 )
+
+            case .overrideNotification, .speedAlert, .scheduleTriggered, .geofenceAlert:
+                // These are parent-bound notifications; child just acknowledges
+                break
             }
 
             // Acknowledge the command
@@ -179,12 +190,86 @@ final class ChildDashboardViewModel: ObservableObject {
         }
     }
 
-    // MARK: - Manual Override
+    // MARK: - Manual Override (now sends a request instead of directly disabling)
 
-    /// Child can manually dismiss safe mode (parent will be notified).
+    /// Child requests safe mode override — sends request to parent for approval.
+    func requestOverride(reason: String = "Emergency") {
+        guard let familyId = familyId, let childId = childId else { return }
+        overrideRequestPending = true
+
+        Task {
+            let request = OverrideRequest(
+                id: UUID().uuidString,
+                childId: childId,
+                reason: reason,
+                status: .pending,
+                requestedAt: Date()
+            )
+            try? await overrideService.submitOverrideRequest(request, familyId: familyId)
+
+            // Also notify parent via a command document
+            _ = try? await commandService.sendCommand(
+                familyId: familyId,
+                type: .overrideNotification,
+                targetChildId: childId,
+                issuedBy: childId,
+                params: CommandParams(reason: "Teen requested safe mode override: \(reason)")
+            )
+        }
+    }
+
+    /// Direct override (only used if parent pre-approved or after approval received).
     func manualOverrideSafeMode() {
         safeModeService.deactivate()
-        // TODO: Notify parent via a Firestore document or FCM that child overrode safe mode
+        overrideRequestPending = false
+
+        guard let familyId = familyId, let childId = childId else { return }
+
+        // Notify parent that child overrode safe mode
+        Task {
+            _ = try? await commandService.sendCommand(
+                familyId: familyId,
+                type: .overrideNotification,
+                targetChildId: childId,
+                issuedBy: childId,
+                params: CommandParams(reason: "Teen overrode safe mode")
+            )
+        }
+    }
+
+    // MARK: - Gamification
+
+    /// Record drive completion for gamification tracking.
+    func recordDriveEnd(wasSafe: Bool) {
+        guard let familyId = familyId, let childId = childId else { return }
+        Task {
+            try? await gamificationService.recordDriveCompletion(
+                familyId: familyId,
+                childId: childId,
+                wasSafe: wasSafe
+            )
+        }
+    }
+
+    // MARK: - Schedule Checking
+
+    private func checkSchedules() {
+        guard let familyId = familyId else { return }
+        scheduleService.startListening(familyId: familyId)
+
+        // Check schedule status periodically
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self = self else { return }
+                if self.scheduleService.isScheduleActiveNow() && !self.safeModeActive {
+                    self.safeModeService.activate(reason: "Scheduled safe mode active")
+                    self.notificationService.scheduleLocal(
+                        title: "Scheduled Safe Mode",
+                        body: "Safe mode activated per schedule."
+                    )
+                }
+            }
+        }
     }
 }
 

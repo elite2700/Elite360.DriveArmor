@@ -61,6 +61,40 @@ service cloud.firestore {
         allow create: if isFamilyMember(familyId);
         allow update, delete: if isFamilyParent(familyId);
       }
+
+      // Override Requests subcollection
+      match /overrideRequests/{requestId} {
+        allow read: if isFamilyMember(familyId);
+        allow create: if isFamilyMember(familyId);         // child creates
+        allow update: if isFamilyParent(familyId);          // parent approves/denies
+        allow delete: if isFamilyParent(familyId);
+      }
+
+      // Rule Change Requests subcollection
+      match /ruleChangeRequests/{requestId} {
+        allow read: if isFamilyMember(familyId);
+        allow create: if isFamilyMember(familyId);         // child creates
+        allow update: if isFamilyParent(familyId);          // parent responds
+        allow delete: if isFamilyParent(familyId);
+      }
+
+      // Geofences subcollection
+      match /geofences/{fenceId} {
+        allow read: if isFamilyMember(familyId);
+        allow write: if isFamilyParent(familyId);           // only parent manages
+      }
+
+      // Schedules subcollection
+      match /schedules/{scheduleId} {
+        allow read: if isFamilyMember(familyId);
+        allow write: if isFamilyParent(familyId);
+      }
+
+      // Gamification subcollection
+      match /gamification/{childId} {
+        allow read: if isFamilyMember(familyId);
+        allow write: if isOwner(childId) && isFamilyMember(familyId);
+      }
     }
   }
 }

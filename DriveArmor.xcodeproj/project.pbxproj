@@ -9,32 +9,47 @@
 /* Begin PBXBuildFile section */
 		000B209D55E22959DA85706C /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9388A4A737348C75BAC995 /* FamilyModel.swift */; };
 		134483C888CAD162D9BF07E6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A570454F914A9914289458 /* UserModel.swift */; };
+		154B3BD6121E1643C5DB32AB /* GamificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2E47AF64AE3F10C2775FC /* GamificationModel.swift */; };
 		17868410D3E1258BF0FD916D /* DrivingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA4AC087071D66CBD25675 /* DrivingLog.swift */; };
 		1821C0EF22230221B6817ED4 /* RemoteControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */; };
 		1B25C26C42AB221CD01FE5EF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605BABE2E19BF49CFD65D889 /* AppConstants.swift */; };
 		1D9F4525D5AFB65E8300FC54 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84C9E14E9F42971AD64B08C /* LoadingView.swift */; };
+		20BE55D298DAAAFE5514CE63 /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF788D76354FEDD533CBDFE9 /* ScheduleListView.swift */; };
+		224396F23D575A53AA62F7FA /* OverrideRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2728824DD9505C647FCD /* OverrideRequest.swift */; };
+		2AECD0FDEFADC5808FA3EA44 /* GeofenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E0579848E245EB5087D18 /* GeofenceModel.swift */; };
+		33342CACE2306147D2191A75 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861137D6C64648B1BA0E817 /* SubscriptionModel.swift */; };
 		36BF8887D43804D82FF29743 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BAEB83594B675367DE957F /* Color+Theme.swift */; };
 		36C691CA5B3B5FF21BF7E525 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2627AABF9C826333C74625F /* ReportsView.swift */; };
+		3A32882B6C1D7ECCEE8B45DF /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB7A89E223FDE0DA856A4B /* SubscriptionService.swift */; };
 		3B9001CEB0CDA944F7F1C976 /* CommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E523940D9CD73EBD41CE3DF /* CommandService.swift */; };
+		4059D96EE22C02BC36DBE2CF /* OverrideRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF765FF382E020A31995CB8 /* OverrideRequestsView.swift */; };
 		44938590FC02A9E519E2C536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA83DC8D4BBAA571F7A3A /* ContentView.swift */; };
 		4A9D743338E814FD93AB5F9D /* SafeModeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */; };
+		4EAB70276BD21071F866D14E /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6289DD958E920A68F7F6 /* ScheduleService.swift */; };
+		4FC22E501D1F1CC7AF82D505 /* GeofenceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583465B7B5F572E773B8C2B /* GeofenceListView.swift */; };
 		50EEBBAF71DE449CE918A178 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */; };
 		588A505F6427C64293F25205 /* ChildDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */; };
+		5979FE43D456CB6E7EEDEC44 /* Pods_DriveArmor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87C85643CBC4A2ECCCF50B /* Pods_DriveArmor.framework */; };
+		5994BD9CD889F7F12A5943EA /* Pods_DriveArmor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B02745936D577297F12415A /* Pods_DriveArmor.framework */; };
 		5E8EE04A8D4C686975EE1E82 /* ChildDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2419B12FFF505724AF903 /* ChildDashboardViewModel.swift */; };
+		6467AB8BD825C3EE311A049B /* GeofenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A172754E7E47835719F13 /* GeofenceService.swift */; };
+		696208B57B681872F39E8760 /* GamificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D353CB2E95F6A7100D801 /* GamificationService.swift */; };
 		6B5DBC14D2459C0D345F9C4A /* DrivingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */; };
 		72A78DCED6275176AAC152EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FC2A0511C84E7A7E8268A /* SettingsView.swift */; };
 		72BB2C6F78DA6036DBDA989B /* JoinFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */; };
 		7531A94FDEF961A86024EC94 /* ParentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F455E165EF003256B203385 /* ParentDashboardView.swift */; };
+		7769F37071F1A26E3EEC704B /* BiometricService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF15650D86C231755D6D03E /* BiometricService.swift */; };
 		77E7662873300764F093FD6B /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AABE65F077A7048A0BB59 /* CommandModel.swift */; };
+		7A576D8A666175E363A6F858 /* Pods_DriveArmorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E19BC3E78337377A1D8D73 /* Pods_DriveArmorTests.framework */; };
 		7B6433CE52026CC51C112DA1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3359E0083E648C5265535 /* AuthService.swift */; };
 		889FB759421F343C8050FE1A /* DeviceStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */; };
-		8A0228E081728D0069896DAD /* DriveArmorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */; };
 		8AAE50BFFDFE705768237811 /* SafeModeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1C853154064906419751E /* SafeModeService.swift */; };
 		8C1459F73358CFC8D776E070 /* FamilyPairingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87679884BE07A14787CF01E0 /* FamilyPairingViewModel.swift */; };
-		8E37330C4C912C434CCA30AC /* Pods_DriveArmorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06ED3C6AF72D8F4C23CFA7A /* Pods_DriveArmorTests.framework */; };
 		91D48188DC21A92A75C721CE /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9B1FF9E6177D10D98348D /* Date+Formatting.swift */; };
 		979E07CA030F726C7D67D897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63D4F572D7719C371203D /* LoginView.swift */; };
 		9BB1A0FDEC013012D3E9EA1A /* DeviceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517D5250ADEB385829BF3EE /* DeviceStatus.swift */; };
+		9D74EEAF123DFB347BE1D834 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019126AD5DC58B5C6AE2A5 /* SubscriptionView.swift */; };
+		9E73D9DCC26F72356E80C3EB /* QRCodePairingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBBAE2CA2D77BF9E06301D8 /* QRCodePairingView.swift */; };
 		A0922A904D8E237C5371C4E7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */; };
 		A2A4CD749F19B11C1371CA7C /* CommandServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2DA11F25E63D42258643A /* CommandServiceTests.swift */; };
 		A2E3DFB5960F5A7A500899D4 /* DrivingDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8015AA8DFC35D779D2003 /* DrivingDetectionTests.swift */; };
@@ -44,153 +59,120 @@
 		A729C02C88CD46A0E29EA8E4 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA0E04868E9593D06C3B08 /* ReportsViewModel.swift */; };
 		AA9F03E1E6AF72DE09EA3A0E /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17557364326F659EE76AA /* FamilyService.swift */; };
 		B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */; };
+		BEA6FA015C9BDB20A19CD360 /* SpeedThresholdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9A0B540A035832F800C15 /* SpeedThresholdView.swift */; };
 		BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */; };
-		C3614CB5F3192A37782EF949 /* Pods_DriveArmor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A149D8FE60EEF337DD97E6E3 /* Pods_DriveArmor.framework */; };
 		C577AB5F7ACD0FBE9AC3FA38 /* ParentDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */; };
 		CF233A2AB53FD49A674920A7 /* CreateFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */; };
 		D0212DE91B1BB09728E9B68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */; };
 		D49E21EC1F3459CDE9BA547D /* ChildStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */; };
-		DC0257FFD8C403300160A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */; };
 		DC114E2DF0BCDF8821F31ABD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC974DF1A36D2843923062C /* LocationService.swift */; };
+		E3CDD442A87FC3CF1ACD01F6 /* OverrideRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61DA6E2EB93FAB9516519C4 /* OverrideRequestService.swift */; };
 		E82D87A744D2361A10F81EE6 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080A451011EBA6F0EB08227 /* NotificationService.swift */; };
+		E9F7FD7ABE552E25984C5819 /* Pods_DriveArmorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3065E396881A521E4D5FD7 /* Pods_DriveArmorTests.framework */; };
 		ECDD81FA9E327444680821A3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA755A120FBCEB2181102448 /* AppState.swift */; };
+		F84DA9226447C863C50CD046 /* RuleChangeRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28A38ECBB0FF516298FB9 /* RuleChangeRequestView.swift */; };
 		FA47D533DEE7158559BA264A /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966BD53E232687EF42164D22 /* RoleSelectionView.swift */; };
+		FE7C608630E3476EC30AA499 /* GamificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54CD559793241A5CFAD8CB8 /* GamificationView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5C37711FF254EFAC0342BF63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12E48C613F7337D33991C6A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D4ACA6CA656EA5A5A5CC5F6;
-			remoteInfo = DriveArmor;
-		};
-		EDD2E4A05765C97DAB092B64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12E48C613F7337D33991C6A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D4ACA6CA656EA5A5A5CC5F6;
-			remoteInfo = DriveArmor;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0497D722140BEAB941C00CB8 /* DriveArmor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriveArmor.entitlements; sourceTree = "<group>"; };
+		01C9A0B540A035832F800C15 /* SpeedThresholdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedThresholdView.swift; sourceTree = "<group>"; };
 		0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFamilyView.swift; sourceTree = "<group>"; };
 		0E523940D9CD73EBD41CE3DF /* CommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandService.swift; sourceTree = "<group>"; };
 		11A570454F914A9914289458 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		126D22457B732EFA47181B49 /* Pods-DriveArmor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmor.release.xcconfig"; path = "Target Support Files/Pods-DriveArmor/Pods-DriveArmor.release.xcconfig"; sourceTree = "<group>"; };
 		158FC2A0511C84E7A7E8268A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1BC974DF1A36D2843923062C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		1F455E165EF003256B203385 /* ParentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardView.swift; sourceTree = "<group>"; };
 		2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28E9B1FF9E6177D10D98348D /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		2AA2E47AF64AE3F10C2775FC /* GamificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamificationModel.swift; sourceTree = "<group>"; };
 		2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFamilyView.swift; sourceTree = "<group>"; };
-		350694383610291CF6FADE5A /* DriveArmorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveArmorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF765FF382E020A31995CB8 /* OverrideRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideRequestsView.swift; sourceTree = "<group>"; };
 		35D63D4F572D7719C371203D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		368DA83DC8D4BBAA571F7A3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38E19BC3E78337377A1D8D73 /* Pods_DriveArmorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2A172754E7E47835719F13 /* GeofenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceService.swift; sourceTree = "<group>"; };
+		3CFB6289DD958E920A68F7F6 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		4080A451011EBA6F0EB08227 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		44033DA979C3781C8B890CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4897E02901E0468D9FC84518 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		4B02745936D577297F12415A /* Pods_DriveArmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B87C85643CBC4A2ECCCF50B /* Pods_DriveArmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9388A4A737348C75BAC995 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
+		4DF15650D86C231755D6D03E /* BiometricService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricService.swift; sourceTree = "<group>"; };
 		50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardViewModel.swift; sourceTree = "<group>"; };
-		5158B8316DC4D75352DE5D85 /* Pods-DriveArmor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmor.debug.xcconfig"; path = "Target Support Files/Pods-DriveArmor/Pods-DriveArmor.debug.xcconfig"; sourceTree = "<group>"; };
+		5100426B093011F979123CEC /* Pods-DriveArmorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmorTests.release.xcconfig"; path = "Target Support Files/Pods-DriveArmorTests/Pods-DriveArmorTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
 		605BABE2E19BF49CFD65D889 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		63B8BF6C14E27895BEC8259B /* Pods-DriveArmorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmorTests.debug.xcconfig"; path = "Target Support Files/Pods-DriveArmorTests/Pods-DriveArmorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63BAEB83594B675367DE957F /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		69F28A38ECBB0FF516298FB9 /* RuleChangeRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleChangeRequestView.swift; sourceTree = "<group>"; };
 		6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDashboardView.swift; sourceTree = "<group>"; };
-		6F18CF18CF688A1FD6D36191 /* DriveArmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveArmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3065E396881A521E4D5FD7 /* Pods_DriveArmorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7792234FF9831A8048515654 /* Pods-DriveArmorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmorTests.debug.xcconfig"; path = "Target Support Files/Pods-DriveArmorTests/Pods-DriveArmorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlView.swift; sourceTree = "<group>"; };
 		7FCA4AC087071D66CBD25675 /* DrivingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLog.swift; sourceTree = "<group>"; };
 		80BA0E04868E9593D06C3B08 /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
 		87679884BE07A14787CF01E0 /* FamilyPairingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPairingViewModel.swift; sourceTree = "<group>"; };
+		8A019126AD5DC58B5C6AE2A5 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		8BEFD367C4AB92E0F59B0B1F /* DriveArmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveArmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBBAE2CA2D77BF9E06301D8 /* QRCodePairingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePairingView.swift; sourceTree = "<group>"; };
 		92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeModeOverlayView.swift; sourceTree = "<group>"; };
 		966BD53E232687EF42164D22 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
 		96E17557364326F659EE76AA /* FamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyService.swift; sourceTree = "<group>"; };
-		99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveArmorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A149D8FE60EEF337DD97E6E3 /* Pods_DriveArmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2627AABF9C826333C74625F /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
-		A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A583465B7B5F572E773B8C2B /* GeofenceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceListView.swift; sourceTree = "<group>"; };
 		A95AABE65F077A7048A0BB59 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
 		ABF3359E0083E648C5265535 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveArmorApp.swift; sourceTree = "<group>"; };
+		AF788D76354FEDD533CBDFE9 /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
+		B16E0579848E245EB5087D18 /* GeofenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceModel.swift; sourceTree = "<group>"; };
 		B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusService.swift; sourceTree = "<group>"; };
 		B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDetectionService.swift; sourceTree = "<group>"; };
-		C06ED3C6AF72D8F4C23CFA7A /* Pods_DriveArmorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveArmorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1D353CB2E95F6A7100D801 /* GamificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamificationService.swift; sourceTree = "<group>"; };
+		BDAB7A89E223FDE0DA856A4B /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		C517D5250ADEB385829BF3EE /* DeviceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatus.swift; sourceTree = "<group>"; };
+		C61DA6E2EB93FAB9516519C4 /* OverrideRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideRequestService.swift; sourceTree = "<group>"; };
 		C84C9E14E9F42971AD64B08C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CE0C2728824DD9505C647FCD /* OverrideRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideRequest.swift; sourceTree = "<group>"; };
 		D36BCFC345F4D00A2776EC92 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveArmorUITests.swift; sourceTree = "<group>"; };
 		DAB1C853154064906419751E /* SafeModeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeModeService.swift; sourceTree = "<group>"; };
-		E2687C33F59EF2C8C78925CB /* Pods-DriveArmor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmor.release.xcconfig"; path = "Target Support Files/Pods-DriveArmor/Pods-DriveArmor.release.xcconfig"; sourceTree = "<group>"; };
+		DD6483CE0600A95B1D24B10E /* DriveArmorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveArmorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA755A120FBCEB2181102448 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		F028EC4CC395AA97345FF951 /* Pods-DriveArmorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmorTests.release.xcconfig"; path = "Target Support Files/Pods-DriveArmorTests/Pods-DriveArmorTests.release.xcconfig"; sourceTree = "<group>"; };
+		F54CD559793241A5CFAD8CB8 /* GamificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamificationView.swift; sourceTree = "<group>"; };
 		F6A2419B12FFF505724AF903 /* ChildDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDashboardViewModel.swift; sourceTree = "<group>"; };
 		F7E2DA11F25E63D42258643A /* CommandServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandServiceTests.swift; sourceTree = "<group>"; };
 		F7F8015AA8DFC35D779D2003 /* DrivingDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDetectionTests.swift; sourceTree = "<group>"; };
+		F861137D6C64648B1BA0E817 /* SubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
+		F9E18AD4CDCF4A4225ED46E3 /* Pods-DriveArmor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveArmor.debug.xcconfig"; path = "Target Support Files/Pods-DriveArmor/Pods-DriveArmor.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildStatusCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F4B264A4EA4661AD798CC59 /* Frameworks */ = {
+		B45964D8D7793EC85148BD43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3614CB5F3192A37782EF949 /* Pods_DriveArmor.framework in Frameworks */,
+				7A576D8A666175E363A6F858 /* Pods_DriveArmorTests.framework in Frameworks */,
+				E9F7FD7ABE552E25984C5819 /* Pods_DriveArmorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6115235F68288B205E2BFB98 /* Frameworks */ = {
+		CE0AC45885C91E39960C3601 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		854FF0F336C2A7848E5B42DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8E37330C4C912C434CCA30AC /* Pods_DriveArmorTests.framework in Frameworks */,
+				5979FE43D456CB6E7EEDEC44 /* Pods_DriveArmor.framework in Frameworks */,
+				5994BD9CD889F7F12A5943EA /* Pods_DriveArmor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0269EFA3AFBE2E0BED14A593 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A149D8FE60EEF337DD97E6E3 /* Pods_DriveArmor.framework */,
-				C06ED3C6AF72D8F4C23CFA7A /* Pods_DriveArmorTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0629F24148029F2AB14A4EF0 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				35D63D4F572D7719C371203D /* LoginView.swift */,
-				966BD53E232687EF42164D22 /* RoleSelectionView.swift */,
-				B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		1BADDC1D73C1A20F347483E1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6F18CF18CF688A1FD6D36191 /* DriveArmor.app */,
-				99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */,
-				350694383610291CF6FADE5A /* DriveArmorUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3136E6F1DF677A1E5E9176FE /* Extensions */ = {
+		00C4B3E465572F9E55DAA06E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				63BAEB83594B675367DE957F /* Color+Theme.swift */,
@@ -199,7 +181,107 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		420CEB417186B52ECF642348 /* ViewModels */ = {
+		0F186C6F1A717DFE4A76E377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9E18AD4CDCF4A4225ED46E3 /* Pods-DriveArmor.debug.xcconfig */,
+				126D22457B732EFA47181B49 /* Pods-DriveArmor.release.xcconfig */,
+				7792234FF9831A8048515654 /* Pods-DriveArmorTests.debug.xcconfig */,
+				5100426B093011F979123CEC /* Pods-DriveArmorTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2D994DEEEEE7B7D648B120C7 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */,
+				F54CD559793241A5CFAD8CB8 /* GamificationView.swift */,
+				92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		2F52B9C816562AD2C817CFA2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				605BABE2E19BF49CFD65D889 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2F5F0C3D30A71245077AD6E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3359E0083E648C5265535 /* AuthService.swift */,
+				4DF15650D86C231755D6D03E /* BiometricService.swift */,
+				0E523940D9CD73EBD41CE3DF /* CommandService.swift */,
+				B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */,
+				B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */,
+				96E17557364326F659EE76AA /* FamilyService.swift */,
+				BD1D353CB2E95F6A7100D801 /* GamificationService.swift */,
+				3B2A172754E7E47835719F13 /* GeofenceService.swift */,
+				1BC974DF1A36D2843923062C /* LocationService.swift */,
+				4080A451011EBA6F0EB08227 /* NotificationService.swift */,
+				C61DA6E2EB93FAB9516519C4 /* OverrideRequestService.swift */,
+				DAB1C853154064906419751E /* SafeModeService.swift */,
+				3CFB6289DD958E920A68F7F6 /* ScheduleService.swift */,
+				BDAB7A89E223FDE0DA856A4B /* SubscriptionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		30772F61AC9BDC8631745269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BEFD367C4AB92E0F59B0B1F /* DriveArmor.app */,
+				DD6483CE0600A95B1D24B10E /* DriveArmorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44594228BD0EBD8EDC10E04A /* DriveArmor */ = {
+			isa = PBXGroup;
+			children = (
+				93B05571F4835A42358FD3D7 /* App */,
+				2F52B9C816562AD2C817CFA2 /* Constants */,
+				00C4B3E465572F9E55DAA06E /* Extensions */,
+				48B8364E0DD98CD0E9867FE2 /* Models */,
+				FF70A2E3B3DEB9A73511193F /* Resources */,
+				2F5F0C3D30A71245077AD6E5 /* Services */,
+				6C0675640D8D911915BB7CC2 /* ViewModels */,
+				84DF3101143A5ED74F0FF51F /* Views */,
+			);
+			path = DriveArmor;
+			sourceTree = "<group>";
+		};
+		48B8364E0DD98CD0E9867FE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A95AABE65F077A7048A0BB59 /* CommandModel.swift */,
+				C517D5250ADEB385829BF3EE /* DeviceStatus.swift */,
+				7FCA4AC087071D66CBD25675 /* DrivingLog.swift */,
+				4D9388A4A737348C75BAC995 /* FamilyModel.swift */,
+				2AA2E47AF64AE3F10C2775FC /* GamificationModel.swift */,
+				B16E0579848E245EB5087D18 /* GeofenceModel.swift */,
+				CE0C2728824DD9505C647FCD /* OverrideRequest.swift */,
+				F861137D6C64648B1BA0E817 /* SubscriptionModel.swift */,
+				11A570454F914A9914289458 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A12ED0DC0047B861AFD1A39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B02745936D577297F12415A /* Pods_DriveArmor.framework */,
+				6C3065E396881A521E4D5FD7 /* Pods_DriveArmorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C0675640D8D911915BB7CC2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */,
@@ -212,72 +294,42 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		44594228BD0EBD8EDC10E04A /* DriveArmor */ = {
+		6D1F4DE63B7B70BBF5FD97B7 /* Pairing */ = {
 			isa = PBXGroup;
 			children = (
-				FE910D29D648D8F2EA669AEF /* App */,
-				C14445B452776726B1DCC0F8 /* Constants */,
-				3136E6F1DF677A1E5E9176FE /* Extensions */,
-				9CF43B31E8845D861542A38E /* Models */,
-				564EAF51B7DD4639ADD9B985 /* Services */,
-				420CEB417186B52ECF642348 /* ViewModels */,
-				C454586A1F4E28C340BDC1AD /* Views */,
-				45B877375D6D6297BAAF2860 /* Resources */,
-				0497D722140BEAB941C00CB8 /* DriveArmor.entitlements */,
+				2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */,
+				0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */,
+				8EBBAE2CA2D77BF9E06301D8 /* QRCodePairingView.swift */,
 			);
-			path = DriveArmor;
+			path = Pairing;
 			sourceTree = "<group>";
 		};
-		45B877375D6D6297BAAF2860 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				44033DA979C3781C8B890CAB /* Info.plist */,
-				A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */,
-				40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		564EAF51B7DD4639ADD9B985 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				ABF3359E0083E648C5265535 /* AuthService.swift */,
-				0E523940D9CD73EBD41CE3DF /* CommandService.swift */,
-				B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */,
-				B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */,
-				96E17557364326F659EE76AA /* FamilyService.swift */,
-				1BC974DF1A36D2843923062C /* LocationService.swift */,
-				4080A451011EBA6F0EB08227 /* NotificationService.swift */,
-				DAB1C853154064906419751E /* SafeModeService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		8D3FC6DB5D0827F168A73277 = {
+		71D2E56247FE75C3DCE9B609 = {
 			isa = PBXGroup;
 			children = (
 				44594228BD0EBD8EDC10E04A /* DriveArmor */,
-				AB8A7C43AA79B5F99563E20C /* DriveArmorTests */,
-				B7D84C5EF5E475648B64B86F /* DriveArmorUITests */,
-				1BADDC1D73C1A20F347483E1 /* Products */,
-				CD4F2731984E2995F09C1622 /* Pods */,
-				0269EFA3AFBE2E0BED14A593 /* Frameworks */,
+				7AEDBE692CD6390D0671936A /* DriveArmorTests */,
+				30772F61AC9BDC8631745269 /* Products */,
+				0F186C6F1A717DFE4A76E377 /* Pods */,
+				4A12ED0DC0047B861AFD1A39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9CF43B31E8845D861542A38E /* Models */ = {
+		737A1A71DC6447A8049E2420 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
-				A95AABE65F077A7048A0BB59 /* CommandModel.swift */,
-				C517D5250ADEB385829BF3EE /* DeviceStatus.swift */,
-				7FCA4AC087071D66CBD25675 /* DrivingLog.swift */,
-				4D9388A4A737348C75BAC995 /* FamilyModel.swift */,
-				11A570454F914A9914289458 /* UserModel.swift */,
+				FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */,
+				A583465B7B5F572E773B8C2B /* GeofenceListView.swift */,
+				1F455E165EF003256B203385 /* ParentDashboardView.swift */,
+				7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */,
+				A2627AABF9C826333C74625F /* ReportsView.swift */,
+				AF788D76354FEDD533CBDFE9 /* ScheduleListView.swift */,
+				01C9A0B540A035832F800C15 /* SpeedThresholdView.swift */,
 			);
-			path = Models;
+			path = Parent;
 			sourceTree = "<group>";
 		};
-		AB8A7C43AA79B5F99563E20C /* DriveArmorTests */ = {
+		7AEDBE692CD6390D0671936A /* DriveArmorTests */ = {
 			isa = PBXGroup;
 			children = (
 				5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */,
@@ -287,102 +339,66 @@
 			path = DriveArmorTests;
 			sourceTree = "<group>";
 		};
-		B7D84C5EF5E475648B64B86F /* DriveArmorUITests */ = {
+		84DF3101143A5ED74F0FF51F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */,
-			);
-			path = DriveArmorUITests;
-			sourceTree = "<group>";
-		};
-		C14445B452776726B1DCC0F8 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				605BABE2E19BF49CFD65D889 /* AppConstants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		C454586A1F4E28C340BDC1AD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0629F24148029F2AB14A4EF0 /* Auth */,
-				FD7DE1C6F8A3A1928D0105E3 /* Child */,
-				E321FA0D3C363447704C6105 /* Pairing */,
-				DBC843D771505ACE3E56B825 /* Parent */,
-				F0E6DDF03F2622020D7F084A /* Settings */,
-				C845E37651EC1E0A31FD0289 /* Shared */,
+				B3C3C5CB51F260E1CB13F530 /* Auth */,
+				2D994DEEEEE7B7D648B120C7 /* Child */,
+				6D1F4DE63B7B70BBF5FD97B7 /* Pairing */,
+				737A1A71DC6447A8049E2420 /* Parent */,
+				E807B2E7B81C5753B343853F /* Settings */,
+				E6F33A70FA10B2A2BDAFA551 /* Shared */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C845E37651EC1E0A31FD0289 /* Shared */ = {
+		93B05571F4835A42358FD3D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */,
+				EA755A120FBCEB2181102448 /* AppState.swift */,
+				368DA83DC8D4BBAA571F7A3A /* ContentView.swift */,
+				ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B3C3C5CB51F260E1CB13F530 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				35D63D4F572D7719C371203D /* LoginView.swift */,
+				966BD53E232687EF42164D22 /* RoleSelectionView.swift */,
+				B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E6F33A70FA10B2A2BDAFA551 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				4897E02901E0468D9FC84518 /* ErrorBanner.swift */,
 				C84C9E14E9F42971AD64B08C /* LoadingView.swift */,
+				2FF765FF382E020A31995CB8 /* OverrideRequestsView.swift */,
+				69F28A38ECBB0FF516298FB9 /* RuleChangeRequestView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		CD4F2731984E2995F09C1622 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5158B8316DC4D75352DE5D85 /* Pods-DriveArmor.debug.xcconfig */,
-				E2687C33F59EF2C8C78925CB /* Pods-DriveArmor.release.xcconfig */,
-				63B8BF6C14E27895BEC8259B /* Pods-DriveArmorTests.debug.xcconfig */,
-				F028EC4CC395AA97345FF951 /* Pods-DriveArmorTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DBC843D771505ACE3E56B825 /* Parent */ = {
-			isa = PBXGroup;
-			children = (
-				FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */,
-				1F455E165EF003256B203385 /* ParentDashboardView.swift */,
-				7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */,
-				A2627AABF9C826333C74625F /* ReportsView.swift */,
-			);
-			path = Parent;
-			sourceTree = "<group>";
-		};
-		E321FA0D3C363447704C6105 /* Pairing */ = {
-			isa = PBXGroup;
-			children = (
-				2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */,
-				0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */,
-			);
-			path = Pairing;
-			sourceTree = "<group>";
-		};
-		F0E6DDF03F2622020D7F084A /* Settings */ = {
+		E807B2E7B81C5753B343853F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				158FC2A0511C84E7A7E8268A /* SettingsView.swift */,
+				8A019126AD5DC58B5C6AE2A5 /* SubscriptionView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		FD7DE1C6F8A3A1928D0105E3 /* Child */ = {
+		FF70A2E3B3DEB9A73511193F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */,
-				92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */,
+				40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */,
 			);
-			path = Child;
-			sourceTree = "<group>";
-		};
-		FE910D29D648D8F2EA669AEF /* App */ = {
-			isa = PBXGroup;
-			children = (
-				ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */,
-				2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */,
-				EA755A120FBCEB2181102448 /* AppState.swift */,
-				368DA83DC8D4BBAA571F7A3A /* ContentView.swift */,
-			);
-			path = App;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,13 +406,13 @@
 /* Begin PBXNativeTarget section */
 		2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F2D622A9BCA2352E3926CC1 /* Build configuration list for PBXNativeTarget "DriveArmor" */;
+			buildConfigurationList = C09F95D15E38CC69A6674673 /* Build configuration list for PBXNativeTarget "DriveArmor" */;
 			buildPhases = (
-				BB0CFB434E0237A4EE5101B2 /* [CP] Check Pods Manifest.lock */,
-				633C6E932BCA47CF314C046A /* Sources */,
-				2F4B264A4EA4661AD798CC59 /* Frameworks */,
-				6AF4B1B1D62EE8C8B0FBA65A /* Resources */,
-				7B91E99EA766521B00F1DF19 /* [CP] Embed Pods Frameworks */,
+				56388A613273BA6F83FA9705 /* [CP] Check Pods Manifest.lock */,
+				450FB992A27AF95ADE042318 /* Sources */,
+				CE0AC45885C91E39960C3601 /* Frameworks */,
+				01763A1948D3E1CF2D398306 /* Resources */,
+				3643DECD0DFE38F04867307A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -404,68 +420,37 @@
 			);
 			name = DriveArmor;
 			productName = DriveArmor;
-			productReference = 6F18CF18CF688A1FD6D36191 /* DriveArmor.app */;
+			productReference = 8BEFD367C4AB92E0F59B0B1F /* DriveArmor.app */;
 			productType = "com.apple.product-type.application";
-		};
-		73ED5611A5F516A68F8EE145 /* DriveArmorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D645622872F53BDFA2351FE0 /* Build configuration list for PBXNativeTarget "DriveArmorUITests" */;
-			buildPhases = (
-				8814B7BDAEA3425FC8D8FDB0 /* Sources */,
-				6115235F68288B205E2BFB98 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				23F89F3008A17551136BCC25 /* PBXTargetDependency */,
-			);
-			name = DriveArmorUITests;
-			productName = DriveArmorUITests;
-			productReference = 350694383610291CF6FADE5A /* DriveArmorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		F2D2B3F3863099DE5195FCBE /* DriveArmorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58D10A57F1BBE2F3F49419D4 /* Build configuration list for PBXNativeTarget "DriveArmorTests" */;
+			buildConfigurationList = 938997E94E15DD5CF3243B0D /* Build configuration list for PBXNativeTarget "DriveArmorTests" */;
 			buildPhases = (
-				DB024D6203CCD8E78036BED1 /* [CP] Check Pods Manifest.lock */,
-				30526341D9D47CDA805E3364 /* Sources */,
-				854FF0F336C2A7848E5B42DB /* Frameworks */,
+				59F5B3E21DFACD65AC7ED601 /* [CP] Check Pods Manifest.lock */,
+				4CD59FC6DC8369509C39E3CB /* Sources */,
+				B45964D8D7793EC85148BD43 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				611E8368483DC7D6AD40A95D /* PBXTargetDependency */,
 			);
 			name = DriveArmorTests;
 			productName = DriveArmorTests;
-			productReference = 99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */;
+			productReference = DD6483CE0600A95B1D24B10E /* DriveArmorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		12E48C613F7337D33991C6A7 /* Project object */ = {
+		5299AC4324DC18342A8CCD96 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1700;
-				LastUpgradeCheck = 1700;
-				TargetAttributes = {
-					2D4ACA6CA656EA5A5A5CC5F6 = {
-						CreatedOnToolsVersion = 17.0;
-					};
-					73ED5611A5F516A68F8EE145 = {
-						CreatedOnToolsVersion = 17.0;
-						TestTargetID = 2D4ACA6CA656EA5A5A5CC5F6;
-					};
-					F2D2B3F3863099DE5195FCBE = {
-						CreatedOnToolsVersion = 17.0;
-						TestTargetID = 2D4ACA6CA656EA5A5A5CC5F6;
-					};
-				};
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
-			buildConfigurationList = 171ECEDBB1E323C51A029750 /* Build configuration list for PBXProject "DriveArmor" */;
+			buildConfigurationList = FE422E61AE992D05BC2E14C2 /* Build configuration list for PBXProject "DriveArmor" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -473,24 +458,22 @@
 				en,
 				Base,
 			);
-			mainGroup = 8D3FC6DB5D0827F168A73277;
-			productRefGroup = 1BADDC1D73C1A20F347483E1 /* Products */;
+			mainGroup = 71D2E56247FE75C3DCE9B609;
+			productRefGroup = 30772F61AC9BDC8631745269 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */,
 				F2D2B3F3863099DE5195FCBE /* DriveArmorTests */,
-				73ED5611A5F516A68F8EE145 /* DriveArmorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6AF4B1B1D62EE8C8B0FBA65A /* Resources */ = {
+		01763A1948D3E1CF2D398306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC0257FFD8C403300160A679 /* Assets.xcassets in Resources */,
 				BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +481,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7B91E99EA766521B00F1DF19 /* [CP] Embed Pods Frameworks */ = {
+		3643DECD0DFE38F04867307A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,7 +498,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DriveArmor/Pods-DriveArmor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BB0CFB434E0237A4EE5101B2 /* [CP] Check Pods Manifest.lock */ = {
+		56388A613273BA6F83FA9705 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -537,7 +520,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB024D6203CCD8E78036BED1 /* [CP] Check Pods Manifest.lock */ = {
+		59F5B3E21DFACD65AC7ED601 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,24 +545,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		30526341D9D47CDA805E3364 /* Sources */ = {
+		450FB992A27AF95ADE042318 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */,
-				A2A4CD749F19B11C1371CA7C /* CommandServiceTests.swift in Sources */,
-				A2E3DFB5960F5A7A500899D4 /* DrivingDetectionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		633C6E932BCA47CF314C046A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4BE2FB594D98C3E9B9C7790 /* DriveArmorApp.swift in Sources */,
 				D0212DE91B1BB09728E9B68E /* AppDelegate.swift in Sources */,
 				ECDD81FA9E327444680821A3 /* AppState.swift in Sources */,
 				44938590FC02A9E519E2C536 /* ContentView.swift in Sources */,
+				A4BE2FB594D98C3E9B9C7790 /* DriveArmorApp.swift in Sources */,
 				1B25C26C42AB221CD01FE5EF /* AppConstants.swift in Sources */,
 				36BF8887D43804D82FF29743 /* Color+Theme.swift in Sources */,
 				91D48188DC21A92A75C721CE /* Date+Formatting.swift in Sources */,
@@ -587,15 +560,25 @@
 				9BB1A0FDEC013012D3E9EA1A /* DeviceStatus.swift in Sources */,
 				17868410D3E1258BF0FD916D /* DrivingLog.swift in Sources */,
 				000B209D55E22959DA85706C /* FamilyModel.swift in Sources */,
+				154B3BD6121E1643C5DB32AB /* GamificationModel.swift in Sources */,
+				2AECD0FDEFADC5808FA3EA44 /* GeofenceModel.swift in Sources */,
+				224396F23D575A53AA62F7FA /* OverrideRequest.swift in Sources */,
+				33342CACE2306147D2191A75 /* SubscriptionModel.swift in Sources */,
 				134483C888CAD162D9BF07E6 /* UserModel.swift in Sources */,
 				7B6433CE52026CC51C112DA1 /* AuthService.swift in Sources */,
+				7769F37071F1A26E3EEC704B /* BiometricService.swift in Sources */,
 				3B9001CEB0CDA944F7F1C976 /* CommandService.swift in Sources */,
 				889FB759421F343C8050FE1A /* DeviceStatusService.swift in Sources */,
 				6B5DBC14D2459C0D345F9C4A /* DrivingDetectionService.swift in Sources */,
 				AA9F03E1E6AF72DE09EA3A0E /* FamilyService.swift in Sources */,
+				696208B57B681872F39E8760 /* GamificationService.swift in Sources */,
+				6467AB8BD825C3EE311A049B /* GeofenceService.swift in Sources */,
 				DC114E2DF0BCDF8821F31ABD /* LocationService.swift in Sources */,
 				E82D87A744D2361A10F81EE6 /* NotificationService.swift in Sources */,
+				E3CDD442A87FC3CF1ACD01F6 /* OverrideRequestService.swift in Sources */,
 				8AAE50BFFDFE705768237811 /* SafeModeService.swift in Sources */,
+				4EAB70276BD21071F866D14E /* ScheduleService.swift in Sources */,
+				3A32882B6C1D7ECCEE8B45DF /* SubscriptionService.swift in Sources */,
 				50EEBBAF71DE449CE918A178 /* AuthViewModel.swift in Sources */,
 				5E8EE04A8D4C686975EE1E82 /* ChildDashboardViewModel.swift in Sources */,
 				8C1459F73358CFC8D776E070 /* FamilyPairingViewModel.swift in Sources */,
@@ -606,258 +589,190 @@
 				FA47D533DEE7158559BA264A /* RoleSelectionView.swift in Sources */,
 				A0922A904D8E237C5371C4E7 /* SignUpView.swift in Sources */,
 				588A505F6427C64293F25205 /* ChildDashboardView.swift in Sources */,
+				FE7C608630E3476EC30AA499 /* GamificationView.swift in Sources */,
 				4A9D743338E814FD93AB5F9D /* SafeModeOverlayView.swift in Sources */,
 				CF233A2AB53FD49A674920A7 /* CreateFamilyView.swift in Sources */,
 				72BB2C6F78DA6036DBDA989B /* JoinFamilyView.swift in Sources */,
+				9E73D9DCC26F72356E80C3EB /* QRCodePairingView.swift in Sources */,
 				D49E21EC1F3459CDE9BA547D /* ChildStatusCard.swift in Sources */,
+				4FC22E501D1F1CC7AF82D505 /* GeofenceListView.swift in Sources */,
 				7531A94FDEF961A86024EC94 /* ParentDashboardView.swift in Sources */,
 				1821C0EF22230221B6817ED4 /* RemoteControlView.swift in Sources */,
 				36C691CA5B3B5FF21BF7E525 /* ReportsView.swift in Sources */,
+				20BE55D298DAAAFE5514CE63 /* ScheduleListView.swift in Sources */,
+				BEA6FA015C9BDB20A19CD360 /* SpeedThresholdView.swift in Sources */,
 				72A78DCED6275176AAC152EA /* SettingsView.swift in Sources */,
+				9D74EEAF123DFB347BE1D834 /* SubscriptionView.swift in Sources */,
 				A6D55054EA14AFA248099A3A /* ErrorBanner.swift in Sources */,
 				1D9F4525D5AFB65E8300FC54 /* LoadingView.swift in Sources */,
+				4059D96EE22C02BC36DBE2CF /* OverrideRequestsView.swift in Sources */,
+				F84DA9226447C863C50CD046 /* RuleChangeRequestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8814B7BDAEA3425FC8D8FDB0 /* Sources */ = {
+		4CD59FC6DC8369509C39E3CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0228E081728D0069896DAD /* DriveArmorUITests.swift in Sources */,
+				B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */,
+				A2A4CD749F19B11C1371CA7C /* CommandServiceTests.swift in Sources */,
+				A2E3DFB5960F5A7A500899D4 /* DrivingDetectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		23F89F3008A17551136BCC25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */;
-			targetProxy = EDD2E4A05765C97DAB092B64 /* PBXContainerItemProxy */;
-		};
-		611E8368483DC7D6AD40A95D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */;
-			targetProxy = 5C37711FF254EFAC0342BF63 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		6B296AAC189B779359784EFD /* Debug */ = {
+		000593AED66FD869DC09DDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B8BF6C14E27895BEC8259B /* Pods-DriveArmorTests.debug.xcconfig */;
+			baseConfigurationReference = 7792234FF9831A8048515654 /* Pods-DriveArmorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor";
 			};
 			name = Debug;
 		};
-		8F0DF21088654F87EF4D18E2 /* Debug */ = {
+		186E3C741D4442FE7542718A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5100426B093011F979123CEC /* Pods-DriveArmorTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DriveArmor;
-			};
-			name = Debug;
-		};
-		9E4CE29EBD7E6E2434449A41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2687C33F59EF2C8C78925CB /* Pods-DriveArmor.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DriveArmor/Resources/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor";
 			};
 			name = Release;
 		};
-		A1CFBB66A86B7730D411A17C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5158B8316DC4D75352DE5D85 /* Pods-DriveArmor.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = DriveArmor/Resources/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		B537D0CB928932EC062AFF39 /* Release */ = {
+		5679C1072468440DCC0739C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
-		D0C8FA6F2BB7A6ECBD3DAAE1 /* Release */ = {
+		810644186E5F2A6D452F0DA1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F028EC4CC395AA97345FF951 /* Pods-DriveArmorTests.release.xcconfig */;
+			baseConfigurationReference = 126D22457B732EFA47181B49 /* Pods-DriveArmor.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorTests;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DriveArmor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		DF31B9448932E56B5318F48D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DriveArmor;
-			};
-			name = Release;
-		};
-		EAEB9BC4FB85B774A2E62512 /* Debug */ = {
+		D3F7E1332B6B89CC946A9F6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E46D84BDF8F7BB0E77A93432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E18AD4CDCF4A4225ED46E3 /* Pods-DriveArmor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DriveArmor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F2D622A9BCA2352E3926CC1 /* Build configuration list for PBXNativeTarget "DriveArmor" */ = {
+		938997E94E15DD5CF3243B0D /* Build configuration list for PBXNativeTarget "DriveArmorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1CFBB66A86B7730D411A17C /* Debug */,
-				9E4CE29EBD7E6E2434449A41 /* Release */,
+				000593AED66FD869DC09DDA1 /* Debug */,
+				186E3C741D4442FE7542718A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		171ECEDBB1E323C51A029750 /* Build configuration list for PBXProject "DriveArmor" */ = {
+		C09F95D15E38CC69A6674673 /* Build configuration list for PBXNativeTarget "DriveArmor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAEB9BC4FB85B774A2E62512 /* Debug */,
-				B537D0CB928932EC062AFF39 /* Release */,
+				E46D84BDF8F7BB0E77A93432 /* Debug */,
+				810644186E5F2A6D452F0DA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58D10A57F1BBE2F3F49419D4 /* Build configuration list for PBXNativeTarget "DriveArmorTests" */ = {
+		FE422E61AE992D05BC2E14C2 /* Build configuration list for PBXProject "DriveArmor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B296AAC189B779359784EFD /* Debug */,
-				D0C8FA6F2BB7A6ECBD3DAAE1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D645622872F53BDFA2351FE0 /* Build configuration list for PBXNativeTarget "DriveArmorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F0DF21088654F87EF4D18E2 /* Debug */,
-				DF31B9448932E56B5318F48D /* Release */,
+				D3F7E1332B6B89CC946A9F6B /* Debug */,
+				5679C1072468440DCC0739C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 12E48C613F7337D33991C6A7 /* Project object */;
+	rootObject = 5299AC4324DC18342A8CCD96 /* Project object */;
 }

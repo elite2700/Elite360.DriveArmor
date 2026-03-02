@@ -125,4 +125,24 @@ final class AppState: ObservableObject {
         currentFamily = nil
         authStage = .unauthenticated
     }
+
+    // MARK: - Convenience Accessors
+
+    var userId: String? { currentUser?.uid }
+    var familyId: String? { currentFamily?.id }
+    var userRole: UserRole? { currentUser?.role }
+
+    // MARK: - Role Switching
+
+    /// Switch current user between parent/child role and persist to Firestore.
+    @MainActor
+    func switchRole(to newRole: UserRole) async throws {
+        guard let uid = currentUser?.uid else { return }
+        try await authService.updateProfile(uid: uid, fields: ["role": newRole.rawValue])
+        currentUser?.role = newRole
+        // Re-resolve stage (may require new pairing)
+        if let user = currentUser {
+            resolveStage(for: user)
+        }
+    }
 }

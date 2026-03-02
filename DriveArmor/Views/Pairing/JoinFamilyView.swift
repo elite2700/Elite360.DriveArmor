@@ -9,6 +9,7 @@ import SwiftUI
 struct JoinFamilyView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = FamilyPairingViewModel()
+    @State private var showQRScanner = false
 
     var body: some View {
         VStack(spacing: 32) {
@@ -55,6 +56,14 @@ struct JoinFamilyView: View {
             .disabled(viewModel.pairingCode.count != 6 || viewModel.isLoading)
             .padding(.horizontal, 32)
 
+            // MARK: - QR Code Option
+            Button {
+                showQRScanner = true
+            } label: {
+                Label("Scan QR Code Instead", systemImage: "qrcode.viewfinder")
+            }
+            .font(.subheadline)
+
             Spacer()
         }
         .navigationTitle("Join Family")
@@ -63,6 +72,11 @@ struct JoinFamilyView: View {
             Button("OK", role: .cancel) {}
         } message: {
             Text(viewModel.errorMessage ?? "")
+        }
+        .sheet(isPresented: $showQRScanner) {
+            NavigationStack {
+                QRCodeScannerPlaceholderView(scannedCode: $viewModel.pairingCode)
+            }
         }
     }
 }

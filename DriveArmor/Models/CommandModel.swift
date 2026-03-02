@@ -10,6 +10,10 @@ import Foundation
 enum CommandType: String, Codable {
     case enableSafeMode
     case disableSafeMode
+    case overrideNotification   // Notify parent that child overrode safe mode
+    case speedAlert             // Alert parent that child exceeded speed threshold
+    case scheduleTriggered      // System command when a schedule window opens/closes
+    case geofenceAlert          // Alert parent about geofence entry/exit
 }
 
 /// Lifecycle status of a command.

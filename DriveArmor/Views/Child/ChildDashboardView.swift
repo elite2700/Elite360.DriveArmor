@@ -9,6 +9,8 @@ import SwiftUI
 struct ChildDashboardView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = ChildDashboardViewModel()
+    @State private var showOverrideSheet = false
+    @State private var overrideReason = ""
 
     var body: some View {
         ZStack {
@@ -77,23 +79,88 @@ struct ChildDashboardView: View {
                     }
                     .padding(.horizontal)
 
-                    // MARK: - Manual Override
+                    // MARK: - Manual Override (Request-based)
                     if viewModel.safeModeActive {
-                        Button(role: .destructive) {
-                            viewModel.manualOverrideSafeMode()
-                        } label: {
-                            Label("Override Safe Mode", systemImage: "exclamationmark.shield.fill")
+                        if viewModel.overrideRequestPending {
+                            Label("Override Request Sent", systemImage: "clock.fill")
+                                .font(.subheadline)
+                                .foregroundStyle(.orange)
                                 .frame(maxWidth: .infinity)
-                                .padding(.vertical, 8)
+                                .padding()
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color.orange.opacity(0.08))
+                                )
+                                .padding(.horizontal)
+                        } else {
+                            Button(role: .destructive) {
+                                showOverrideSheet = true
+                            } label: {
+                                Label("Request Override", systemImage: "exclamationmark.shield.fill")
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 8)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(.red)
+                            .padding(.horizontal)
                         }
-                        .buttonStyle(.bordered)
-                        .tint(.red)
-                        .padding(.horizontal)
 
-                        Text("Your parent will be notified if you override safe mode.")
+                        Text("Your parent will be notified and must approve the override.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
+
+                    // MARK: - Gamification & Rule Changes
+                    HStack(spacing: 12) {
+                        NavigationLink(destination: GamificationView()) {
+                            VStack(spacing: 6) {
+                                Image(systemName: "trophy.fill")
+                                    .font(.title2)
+                                    .foregroundStyle(.yellow)
+                                Text("My Driving")
+                                    .font(.caption.bold())
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color.yellow.opacity(0.08))
+                            )
+                        }
+
+                        NavigationLink(destination: RuleChangeRequestView()) {
+                            VStack(spacing: 6) {
+                                Image(systemName: "doc.badge.gearshape")
+                                    .font(.title2)
+                                    .foregroundStyle(.teal)
+                                Text("Rule Changes")
+                                    .font(.caption.bold())
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color.teal.opacity(0.08))
+                            )
+                        }
+
+                        NavigationLink(destination: OverrideRequestsView()) {
+                            VStack(spacing: 6) {
+                                Image(systemName: "hand.raised.fill")
+                                    .font(.title2)
+                                    .foregroundStyle(.red)
+                                Text("Overrides")
+                                    .font(.caption.bold())
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color.red.opacity(0.08))
+                            )
+                        }
+                    }
+                    .padding(.horizontal)
 
                     Spacer(minLength: 60)
                 }
@@ -118,6 +185,37 @@ struct ChildDashboardView: View {
         }
         .onDisappear {
             viewModel.stop()
+        }
+        .sheet(isPresented: $showOverrideSheet) {
+            NavigationStack {
+                Form {
+                    Section("Why do you need to override safe mode?") {
+                        TextEditor(text: $overrideReason)
+                            .frame(minHeight: 80)
+                    }
+                }
+                .navigationTitle("Override Request")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel") { showOverrideSheet = false }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Send Request") {
+                            viewModel.requestOverride(reason: overrideReason.isEmpty ? "Emergency" : overrideReason)
+                            overrideReason = ""
+                            showOverrideSheet = false
+                        }
+                    }
+                }
+            }
+            .presentationDetents([.medium])
+        }
+        .onChange(of: viewModel.isDriving) { wasDriving, isDriving in
+            if wasDriving && !isDriving {
+                // Drive ended — record for gamification
+                viewModel.recordDriveEnd(wasSafe: !viewModel.safeModeActive)
+            }
         }
     }
 }

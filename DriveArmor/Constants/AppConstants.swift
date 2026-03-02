@@ -10,11 +10,16 @@ enum AppConstants {
     // MARK: - Firestore Collection Paths
 
     enum Firestore {
-        static let usersCollection         = "users"
-        static let familiesCollection      = "families"
-        static let commandsSubcollection   = "commands"
-        static let deviceStatusSubcollection = "deviceStatus"
-        static let drivingLogsSubcollection  = "drivingLogs"
+        static let usersCollection             = "users"
+        static let familiesCollection          = "families"
+        static let commandsSubcollection       = "commands"
+        static let deviceStatusSubcollection   = "deviceStatus"
+        static let drivingLogsSubcollection    = "drivingLogs"
+        static let overrideRequestsSub         = "overrideRequests"
+        static let ruleChangeRequestsSub       = "ruleChangeRequests"
+        static let geofencesSub                = "geofences"
+        static let schedulesSub                = "schedules"
+        static let gamificationSub             = "gamification"
     }
 
     // MARK: - Driving Detection
@@ -47,5 +52,25 @@ enum AppConstants {
     enum UI {
         /// Maximum speed shown on the child dashboard ring (mph).
         static let speedometerMax: Double = 80.0
+    }
+
+    // MARK: - Subscription
+
+    enum Subscription {
+        static let monthlyStandardId     = "com.elite360.DriveArmor.standard.monthly"
+        static let monthlyPremiumId      = "com.elite360.DriveArmor.premium.monthly"
+        static let monthlyFamilyId       = "com.elite360.DriveArmor.family.monthly"
+        static let annualStandardId      = "com.elite360.DriveArmor.standard.annual"
+        static let annualPremiumId       = "com.elite360.DriveArmor.premium.annual"
+        static let annualFamilyId        = "com.elite360.DriveArmor.family.annual"
+    }
+
+    // MARK: - Gamification
+
+    enum Gamification {
+        static let pointsPerSafeDrive     = 10
+        static let pointsPerDrive         = 2
+        static let pointsPerBadge         = 50
+        static let streakMasterThreshold  = 30  // consecutive days
     }
 }
