@@ -7,14 +7,8 @@
     <key>aps-environment</key>
     <string>development</string>
 
-    <!-- Background Modes -->
-    <key>com.apple.developer.background-modes</key>
-    <array>
-        <string>fetch</string>
-        <string>location</string>
-        <string>processing</string>
-        <string>remote-notification</string>
-    </array>
+    <!-- Background Modes are declared in Info.plist via UIBackgroundModes,
+         NOT as an entitlement. Do not add com.apple.developer.background-modes here. -->
 
     <!-- Family Controls (for Screen Time API, if applicable) -->
     <!-- Uncomment when Family Controls entitlement is approved by Apple:
