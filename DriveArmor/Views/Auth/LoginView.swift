@@ -18,7 +18,7 @@ struct LoginView: View {
                 Image("DriveArmorLogo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 120, height: 120)
+                    .frame(width: 192, height: 192)
                     .clipShape(RoundedRectangle(cornerRadius: 24))
                     .shadow(color: .accentColor.opacity(0.3), radius: 8, y: 4)
 
