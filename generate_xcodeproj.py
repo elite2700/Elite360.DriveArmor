@@ -370,7 +370,7 @@ target_settings = {
     "CODE_SIGN_ENTITLEMENTS": '"DriveArmor/DriveArmor.entitlements"',
     "CODE_SIGN_STYLE": "Automatic",
     "CURRENT_PROJECT_VERSION": "1",
-    "INFOPLIST_FILE": '"DriveArmor/Info.plist"',
+    "INFOPLIST_FILE": '"DriveArmor/Resources/Info.plist"',
     "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
     "LD_RUNPATH_SEARCH_PATHS": '"$(inherited) @executable_path/Frameworks"',
     "MARKETING_VERSION": "1.0.0",
