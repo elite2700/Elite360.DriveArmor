@@ -14,7 +14,7 @@ struct LoginView: View {
             Spacer()
 
             // MARK: - Logo / Title
-            VStack(spacing: 12) {
+            VStack(spacing: 8) {
                 Image("DriveArmorLogo")
                     .resizable()
                     .scaledToFit()
@@ -25,11 +25,16 @@ struct LoginView: View {
                 Text("DriveArmor")
                     .font(.largeTitle.bold())
 
-                Text("Keep your family safe on the road")
+                Text("by The Elite360 Corporation")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+
+                Image("E360Logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 40)
             }
-            .padding(.bottom, 40)
+            .padding(.bottom, 32)
 
             // MARK: - Form
             VStack(spacing: 16) {
