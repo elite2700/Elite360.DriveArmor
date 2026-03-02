@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4BE2FB594D98C3E9B9C7790 /* DriveArmorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */; };
+		D0212DE91B1BB09728E9B68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */; };
+		ECDD81FA9E327444680821A3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA755A120FBCEB2181102448 /* AppState.swift */; };
+		44938590FC02A9E519E2C536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA83DC8D4BBAA571F7A3A /* ContentView.swift */; };
+		1B25C26C42AB221CD01FE5EF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605BABE2E19BF49CFD65D889 /* AppConstants.swift */; };
+		36BF8887D43804D82FF29743 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BAEB83594B675367DE957F /* Color+Theme.swift */; };
+		91D48188DC21A92A75C721CE /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9B1FF9E6177D10D98348D /* Date+Formatting.swift */; };
+		77E7662873300764F093FD6B /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AABE65F077A7048A0BB59 /* CommandModel.swift */; };
+		9BB1A0FDEC013012D3E9EA1A /* DeviceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517D5250ADEB385829BF3EE /* DeviceStatus.swift */; };
+		17868410D3E1258BF0FD916D /* DrivingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA4AC087071D66CBD25675 /* DrivingLog.swift */; };
+		000B209D55E22959DA85706C /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9388A4A737348C75BAC995 /* FamilyModel.swift */; };
+		134483C888CAD162D9BF07E6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A570454F914A9914289458 /* UserModel.swift */; };
+		7B6433CE52026CC51C112DA1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3359E0083E648C5265535 /* AuthService.swift */; };
+		3B9001CEB0CDA944F7F1C976 /* CommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E523940D9CD73EBD41CE3DF /* CommandService.swift */; };
+		889FB759421F343C8050FE1A /* DeviceStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */; };
+		6B5DBC14D2459C0D345F9C4A /* DrivingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */; };
+		AA9F03E1E6AF72DE09EA3A0E /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17557364326F659EE76AA /* FamilyService.swift */; };
+		DC114E2DF0BCDF8821F31ABD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC974DF1A36D2843923062C /* LocationService.swift */; };
+		E82D87A744D2361A10F81EE6 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080A451011EBA6F0EB08227 /* NotificationService.swift */; };
+		8AAE50BFFDFE705768237811 /* SafeModeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1C853154064906419751E /* SafeModeService.swift */; };
+		50EEBBAF71DE449CE918A178 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */; };
+		5E8EE04A8D4C686975EE1E82 /* ChildDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2419B12FFF505724AF903 /* ChildDashboardViewModel.swift */; };
+		8C1459F73358CFC8D776E070 /* FamilyPairingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87679884BE07A14787CF01E0 /* FamilyPairingViewModel.swift */; };
+		C577AB5F7ACD0FBE9AC3FA38 /* ParentDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */; };
+		A729C02C88CD46A0E29EA8E4 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA0E04868E9593D06C3B08 /* ReportsViewModel.swift */; };
+		A688A82CBE1CF06925492F1F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BCFC345F4D00A2776EC92 /* SettingsViewModel.swift */; };
+		979E07CA030F726C7D67D897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63D4F572D7719C371203D /* LoginView.swift */; };
+		FA47D533DEE7158559BA264A /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966BD53E232687EF42164D22 /* RoleSelectionView.swift */; };
+		A0922A904D8E237C5371C4E7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */; };
+		588A505F6427C64293F25205 /* ChildDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */; };
+		4A9D743338E814FD93AB5F9D /* SafeModeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */; };
+		CF233A2AB53FD49A674920A7 /* CreateFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */; };
+		72BB2C6F78DA6036DBDA989B /* JoinFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */; };
+		D49E21EC1F3459CDE9BA547D /* ChildStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */; };
+		7531A94FDEF961A86024EC94 /* ParentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F455E165EF003256B203385 /* ParentDashboardView.swift */; };
+		1821C0EF22230221B6817ED4 /* RemoteControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */; };
+		36C691CA5B3B5FF21BF7E525 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2627AABF9C826333C74625F /* ReportsView.swift */; };
+		72A78DCED6275176AAC152EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FC2A0511C84E7A7E8268A /* SettingsView.swift */; };
+		A6D55054EA14AFA248099A3A /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897E02901E0468D9FC84518 /* ErrorBanner.swift */; };
+		1D9F4525D5AFB65E8300FC54 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84C9E14E9F42971AD64B08C /* LoadingView.swift */; };
+		DC0257FFD8C403300160A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */; };
+		BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */; };
+		B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */; };
+		A2A4CD749F19B11C1371CA7C /* CommandServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2DA11F25E63D42258643A /* CommandServiceTests.swift */; };
+		A2E3DFB5960F5A7A500899D4 /* DrivingDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8015AA8DFC35D779D2003 /* DrivingDetectionTests.swift */; };
+		8A0228E081728D0069896DAD /* DriveArmorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C37711FF254EFAC0342BF63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12E48C613F7337D33991C6A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4ACA6CA656EA5A5A5CC5F6;
+			remoteInfo = DriveArmor;
+		};
+		EDD2E4A05765C97DAB092B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12E48C613F7337D33991C6A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4ACA6CA656EA5A5A5CC5F6;
+			remoteInfo = DriveArmor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6F18CF18CF688A1FD6D36191 /* DriveArmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveArmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveArmorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		350694383610291CF6FADE5A /* DriveArmorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveArmorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0497D722140BEAB941C00CB8 /* DriveArmor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriveArmor.entitlements; sourceTree = "<group>"; };
+		44033DA979C3781C8B890CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveArmorApp.swift; sourceTree = "<group>"; };
+		2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA755A120FBCEB2181102448 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		368DA83DC8D4BBAA571F7A3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		605BABE2E19BF49CFD65D889 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		63BAEB83594B675367DE957F /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color+Theme.swift; sourceTree = "<group>"; };
+		28E9B1FF9E6177D10D98348D /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date+Formatting.swift; sourceTree = "<group>"; };
+		A95AABE65F077A7048A0BB59 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
+		C517D5250ADEB385829BF3EE /* DeviceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatus.swift; sourceTree = "<group>"; };
+		7FCA4AC087071D66CBD25675 /* DrivingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLog.swift; sourceTree = "<group>"; };
+		4D9388A4A737348C75BAC995 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
+		11A570454F914A9914289458 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ABF3359E0083E648C5265535 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0E523940D9CD73EBD41CE3DF /* CommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandService.swift; sourceTree = "<group>"; };
+		B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusService.swift; sourceTree = "<group>"; };
+		B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDetectionService.swift; sourceTree = "<group>"; };
+		96E17557364326F659EE76AA /* FamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyService.swift; sourceTree = "<group>"; };
+		1BC974DF1A36D2843923062C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		4080A451011EBA6F0EB08227 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		DAB1C853154064906419751E /* SafeModeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeModeService.swift; sourceTree = "<group>"; };
+		6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		F6A2419B12FFF505724AF903 /* ChildDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDashboardViewModel.swift; sourceTree = "<group>"; };
+		87679884BE07A14787CF01E0 /* FamilyPairingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPairingViewModel.swift; sourceTree = "<group>"; };
+		50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardViewModel.swift; sourceTree = "<group>"; };
+		80BA0E04868E9593D06C3B08 /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
+		D36BCFC345F4D00A2776EC92 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		35D63D4F572D7719C371203D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		966BD53E232687EF42164D22 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
+		B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDashboardView.swift; sourceTree = "<group>"; };
+		92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeModeOverlayView.swift; sourceTree = "<group>"; };
+		2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFamilyView.swift; sourceTree = "<group>"; };
+		0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFamilyView.swift; sourceTree = "<group>"; };
+		FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildStatusCard.swift; sourceTree = "<group>"; };
+		1F455E165EF003256B203385 /* ParentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardView.swift; sourceTree = "<group>"; };
+		7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlView.swift; sourceTree = "<group>"; };
+		A2627AABF9C826333C74625F /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		158FC2A0511C84E7A7E8268A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4897E02901E0468D9FC84518 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		C84C9E14E9F42971AD64B08C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GoogleService-Info.plist; sourceTree = "<group>"; };
+		5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
+		F7E2DA11F25E63D42258643A /* CommandServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandServiceTests.swift; sourceTree = "<group>"; };
+		F7F8015AA8DFC35D779D2003 /* DrivingDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDetectionTests.swift; sourceTree = "<group>"; };
+		D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveArmorUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F4B264A4EA4661AD798CC59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854FF0F336C2A7848E5B42DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6115235F68288B205E2BFB98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D3FC6DB5D0827F168A73277 = {
+			isa = PBXGroup;
+			children = (
+				44594228BD0EBD8EDC10E04A /* DriveArmor */,
+				AB8A7C43AA79B5F99563E20C /* DriveArmorTests */,
+				B7D84C5EF5E475648B64B86F /* DriveArmorUITests */,
+				1BADDC1D73C1A20F347483E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BADDC1D73C1A20F347483E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F18CF18CF688A1FD6D36191 /* DriveArmor.app */,
+				99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */,
+				350694383610291CF6FADE5A /* DriveArmorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44594228BD0EBD8EDC10E04A /* DriveArmor */ = {
+			isa = PBXGroup;
+			children = (
+				FE910D29D648D8F2EA669AEF /* App */,
+				C14445B452776726B1DCC0F8 /* Constants */,
+				3136E6F1DF677A1E5E9176FE /* Extensions */,
+				9CF43B31E8845D861542A38E /* Models */,
+				564EAF51B7DD4639ADD9B985 /* Services */,
+				420CEB417186B52ECF642348 /* ViewModels */,
+				C454586A1F4E28C340BDC1AD /* Views */,
+				45B877375D6D6297BAAF2860 /* Resources */,
+				0497D722140BEAB941C00CB8 /* DriveArmor.entitlements */,
+			);
+			path = DriveArmor;
+			sourceTree = "<group>";
+		};
+		FE910D29D648D8F2EA669AEF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ACDA1A75D3F983E0A238A754 /* DriveArmorApp.swift */,
+				2551EB7452E6866C4E2C0C9B /* AppDelegate.swift */,
+				EA755A120FBCEB2181102448 /* AppState.swift */,
+				368DA83DC8D4BBAA571F7A3A /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C14445B452776726B1DCC0F8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				605BABE2E19BF49CFD65D889 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3136E6F1DF677A1E5E9176FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63BAEB83594B675367DE957F /* Color+Theme.swift */,
+				28E9B1FF9E6177D10D98348D /* Date+Formatting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CF43B31E8845D861542A38E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A95AABE65F077A7048A0BB59 /* CommandModel.swift */,
+				C517D5250ADEB385829BF3EE /* DeviceStatus.swift */,
+				7FCA4AC087071D66CBD25675 /* DrivingLog.swift */,
+				4D9388A4A737348C75BAC995 /* FamilyModel.swift */,
+				11A570454F914A9914289458 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		564EAF51B7DD4639ADD9B985 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABF3359E0083E648C5265535 /* AuthService.swift */,
+				0E523940D9CD73EBD41CE3DF /* CommandService.swift */,
+				B368571EDCA6D92B7F393179 /* DeviceStatusService.swift */,
+				B56B61CE30C3128BFEEBB127 /* DrivingDetectionService.swift */,
+				96E17557364326F659EE76AA /* FamilyService.swift */,
+				1BC974DF1A36D2843923062C /* LocationService.swift */,
+				4080A451011EBA6F0EB08227 /* NotificationService.swift */,
+				DAB1C853154064906419751E /* SafeModeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		420CEB417186B52ECF642348 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6B82DFC1C8095A03AC38F9C9 /* AuthViewModel.swift */,
+				F6A2419B12FFF505724AF903 /* ChildDashboardViewModel.swift */,
+				87679884BE07A14787CF01E0 /* FamilyPairingViewModel.swift */,
+				50D584C2BCCCFCAEB326AFC8 /* ParentDashboardViewModel.swift */,
+				80BA0E04868E9593D06C3B08 /* ReportsViewModel.swift */,
+				D36BCFC345F4D00A2776EC92 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C454586A1F4E28C340BDC1AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0629F24148029F2AB14A4EF0 /* Auth */,
+				FD7DE1C6F8A3A1928D0105E3 /* Child */,
+				E321FA0D3C363447704C6105 /* Pairing */,
+				DBC843D771505ACE3E56B825 /* Parent */,
+				F0E6DDF03F2622020D7F084A /* Settings */,
+				C845E37651EC1E0A31FD0289 /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0629F24148029F2AB14A4EF0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				35D63D4F572D7719C371203D /* LoginView.swift */,
+				966BD53E232687EF42164D22 /* RoleSelectionView.swift */,
+				B20C3E1160FDF58F1E10B0B7 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FD7DE1C6F8A3A1928D0105E3 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C332B5E27B35DEAC20984 /* ChildDashboardView.swift */,
+				92508C460D2B9BA51C52A067 /* SafeModeOverlayView.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		E321FA0D3C363447704C6105 /* Pairing */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CF92C3B41BD98926C6350 /* CreateFamilyView.swift */,
+				0AC486027B3740728A1D38D0 /* JoinFamilyView.swift */,
+			);
+			path = Pairing;
+			sourceTree = "<group>";
+		};
+		DBC843D771505ACE3E56B825 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7636B15BC32E0568C3A52 /* ChildStatusCard.swift */,
+				1F455E165EF003256B203385 /* ParentDashboardView.swift */,
+				7B0B65CFDE1D11349508D729 /* RemoteControlView.swift */,
+				A2627AABF9C826333C74625F /* ReportsView.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		F0E6DDF03F2622020D7F084A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				158FC2A0511C84E7A7E8268A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C845E37651EC1E0A31FD0289 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4897E02901E0468D9FC84518 /* ErrorBanner.swift */,
+				C84C9E14E9F42971AD64B08C /* LoadingView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		45B877375D6D6297BAAF2860 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44033DA979C3781C8B890CAB /* Info.plist */,
+				A8DF39DC7CF1FEDA451D2F14 /* Assets.xcassets */,
+				40BB0E266290FF3EABEA46CA /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB8A7C43AA79B5F99563E20C /* DriveArmorTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E1CE4311D13B407F0BFAD3D /* AuthServiceTests.swift */,
+				F7E2DA11F25E63D42258643A /* CommandServiceTests.swift */,
+				F7F8015AA8DFC35D779D2003 /* DrivingDetectionTests.swift */,
+			);
+			path = DriveArmorTests;
+			sourceTree = "<group>";
+		};
+		B7D84C5EF5E475648B64B86F /* DriveArmorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB5DA1C041F1FA591931FD /* DriveArmorUITests.swift */,
+			);
+			path = DriveArmorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F2D622A9BCA2352E3926CC1 /* Build configuration list for PBXNativeTarget "DriveArmor" */;
+			buildPhases = (
+				633C6E932BCA47CF314C046A /* Sources */,
+				2F4B264A4EA4661AD798CC59 /* Frameworks */,
+				6AF4B1B1D62EE8C8B0FBA65A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveArmor;
+			productName = DriveArmor;
+			productReference = 6F18CF18CF688A1FD6D36191 /* DriveArmor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2D2B3F3863099DE5195FCBE /* DriveArmorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D10A57F1BBE2F3F49419D4 /* Build configuration list for PBXNativeTarget "DriveArmorTests" */;
+			buildPhases = (
+				30526341D9D47CDA805E3364 /* Sources */,
+				854FF0F336C2A7848E5B42DB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				611E8368483DC7D6AD40A95D /* PBXTargetDependency */,
+			);
+			name = DriveArmorTests;
+			productName = DriveArmorTests;
+			productReference = 99D4711C9F775E5B845E1ACF /* DriveArmorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		73ED5611A5F516A68F8EE145 /* DriveArmorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D645622872F53BDFA2351FE0 /* Build configuration list for PBXNativeTarget "DriveArmorUITests" */;
+			buildPhases = (
+				8814B7BDAEA3425FC8D8FDB0 /* Sources */,
+				6115235F68288B205E2BFB98 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23F89F3008A17551136BCC25 /* PBXTargetDependency */,
+			);
+			name = DriveArmorUITests;
+			productName = DriveArmorUITests;
+			productReference = 350694383610291CF6FADE5A /* DriveArmorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12E48C613F7337D33991C6A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1700;
+				LastUpgradeCheck = 1700;
+				TargetAttributes = {
+					2D4ACA6CA656EA5A5A5CC5F6 = {
+						CreatedOnToolsVersion = 17.0;
+					};
+					F2D2B3F3863099DE5195FCBE = {
+						CreatedOnToolsVersion = 17.0;
+						TestTargetID = 2D4ACA6CA656EA5A5A5CC5F6;
+					};
+					73ED5611A5F516A68F8EE145 = {
+						CreatedOnToolsVersion = 17.0;
+						TestTargetID = 2D4ACA6CA656EA5A5A5CC5F6;
+					};
+				};
+			};
+			buildConfigurationList = 171ECEDBB1E323C51A029750 /* Build configuration list for PBXProject "DriveArmor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D3FC6DB5D0827F168A73277;
+			productRefGroup = 1BADDC1D73C1A20F347483E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */,
+				F2D2B3F3863099DE5195FCBE /* DriveArmorTests */,
+				73ED5611A5F516A68F8EE145 /* DriveArmorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AF4B1B1D62EE8C8B0FBA65A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0257FFD8C403300160A679 /* Assets.xcassets in Resources */,
+				BEFC1C717B1D06A347C29C25 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		633C6E932BCA47CF314C046A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BE2FB594D98C3E9B9C7790 /* DriveArmorApp.swift in Sources */,
+				D0212DE91B1BB09728E9B68E /* AppDelegate.swift in Sources */,
+				ECDD81FA9E327444680821A3 /* AppState.swift in Sources */,
+				44938590FC02A9E519E2C536 /* ContentView.swift in Sources */,
+				1B25C26C42AB221CD01FE5EF /* AppConstants.swift in Sources */,
+				36BF8887D43804D82FF29743 /* Color+Theme.swift in Sources */,
+				91D48188DC21A92A75C721CE /* Date+Formatting.swift in Sources */,
+				77E7662873300764F093FD6B /* CommandModel.swift in Sources */,
+				9BB1A0FDEC013012D3E9EA1A /* DeviceStatus.swift in Sources */,
+				17868410D3E1258BF0FD916D /* DrivingLog.swift in Sources */,
+				000B209D55E22959DA85706C /* FamilyModel.swift in Sources */,
+				134483C888CAD162D9BF07E6 /* UserModel.swift in Sources */,
+				7B6433CE52026CC51C112DA1 /* AuthService.swift in Sources */,
+				3B9001CEB0CDA944F7F1C976 /* CommandService.swift in Sources */,
+				889FB759421F343C8050FE1A /* DeviceStatusService.swift in Sources */,
+				6B5DBC14D2459C0D345F9C4A /* DrivingDetectionService.swift in Sources */,
+				AA9F03E1E6AF72DE09EA3A0E /* FamilyService.swift in Sources */,
+				DC114E2DF0BCDF8821F31ABD /* LocationService.swift in Sources */,
+				E82D87A744D2361A10F81EE6 /* NotificationService.swift in Sources */,
+				8AAE50BFFDFE705768237811 /* SafeModeService.swift in Sources */,
+				50EEBBAF71DE449CE918A178 /* AuthViewModel.swift in Sources */,
+				5E8EE04A8D4C686975EE1E82 /* ChildDashboardViewModel.swift in Sources */,
+				8C1459F73358CFC8D776E070 /* FamilyPairingViewModel.swift in Sources */,
+				C577AB5F7ACD0FBE9AC3FA38 /* ParentDashboardViewModel.swift in Sources */,
+				A729C02C88CD46A0E29EA8E4 /* ReportsViewModel.swift in Sources */,
+				A688A82CBE1CF06925492F1F /* SettingsViewModel.swift in Sources */,
+				979E07CA030F726C7D67D897 /* LoginView.swift in Sources */,
+				FA47D533DEE7158559BA264A /* RoleSelectionView.swift in Sources */,
+				A0922A904D8E237C5371C4E7 /* SignUpView.swift in Sources */,
+				588A505F6427C64293F25205 /* ChildDashboardView.swift in Sources */,
+				4A9D743338E814FD93AB5F9D /* SafeModeOverlayView.swift in Sources */,
+				CF233A2AB53FD49A674920A7 /* CreateFamilyView.swift in Sources */,
+				72BB2C6F78DA6036DBDA989B /* JoinFamilyView.swift in Sources */,
+				D49E21EC1F3459CDE9BA547D /* ChildStatusCard.swift in Sources */,
+				7531A94FDEF961A86024EC94 /* ParentDashboardView.swift in Sources */,
+				1821C0EF22230221B6817ED4 /* RemoteControlView.swift in Sources */,
+				36C691CA5B3B5FF21BF7E525 /* ReportsView.swift in Sources */,
+				72A78DCED6275176AAC152EA /* SettingsView.swift in Sources */,
+				A6D55054EA14AFA248099A3A /* ErrorBanner.swift in Sources */,
+				1D9F4525D5AFB65E8300FC54 /* LoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30526341D9D47CDA805E3364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B86D46CF5FEF1DE3801F00F7 /* AuthServiceTests.swift in Sources */,
+				A2A4CD749F19B11C1371CA7C /* CommandServiceTests.swift in Sources */,
+				A2E3DFB5960F5A7A500899D4 /* DrivingDetectionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8814B7BDAEA3425FC8D8FDB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0228E081728D0069896DAD /* DriveArmorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		611E8368483DC7D6AD40A95D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */;
+			targetProxy = 5C37711FF254EFAC0342BF63 /* PBXContainerItemProxy */;
+		};
+		23F89F3008A17551136BCC25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4ACA6CA656EA5A5A5CC5F6 /* DriveArmor */;
+			targetProxy = EDD2E4A05765C97DAB092B64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EAEB9BC4FB85B774A2E62512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B537D0CB928932EC062AFF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1CFBB66A86B7730D411A17C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DriveArmor/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		9E4CE29EBD7E6E2434449A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DriveArmor/DriveArmor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DriveArmor/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+		6B296AAC189B779359784EFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor";
+			};
+			name = Debug;
+		};
+		D0C8FA6F2BB7A6ECBD3DAAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor";
+			};
+			name = Release;
+		};
+		8F0DF21088654F87EF4D18E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				TEST_TARGET_NAME = DriveArmor;
+			};
+			name = Debug;
+		};
+		DF31B9448932E56B5318F48D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elite360.DriveArmorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				TEST_TARGET_NAME = DriveArmor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		171ECEDBB1E323C51A029750 /* Build configuration list for PBXProject "DriveArmor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAEB9BC4FB85B774A2E62512 /* Debug */,
+				B537D0CB928932EC062AFF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F2D622A9BCA2352E3926CC1 /* Build configuration list for PBXNativeTarget "DriveArmor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1CFBB66A86B7730D411A17C /* Debug */,
+				9E4CE29EBD7E6E2434449A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D10A57F1BBE2F3F49419D4 /* Build configuration list for PBXNativeTarget "DriveArmorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B296AAC189B779359784EFD /* Debug */,
+				D0C8FA6F2BB7A6ECBD3DAAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D645622872F53BDFA2351FE0 /* Build configuration list for PBXNativeTarget "DriveArmorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0DF21088654F87EF4D18E2 /* Debug */,
+				DF31B9448932E56B5318F48D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 12E48C613F7337D33991C6A7 /* Project object */;
+}
