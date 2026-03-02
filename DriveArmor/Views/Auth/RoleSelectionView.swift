@@ -18,7 +18,14 @@ struct RoleSelectionView: View {
         VStack(spacing: 32) {
             Spacer()
 
-            VStack(spacing: 8) {
+            VStack(spacing: 12) {
+                Image("DriveArmorLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 88, height: 88)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(color: .accentColor.opacity(0.2), radius: 6, y: 3)
+
                 Text("Who are you?")
                     .font(.title.bold())
                 Text("Choose your role to get started.")

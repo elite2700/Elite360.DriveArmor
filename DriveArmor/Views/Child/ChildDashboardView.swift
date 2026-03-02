@@ -18,7 +18,13 @@ struct ChildDashboardView: View {
             ScrollView {
                 VStack(spacing: 24) {
                     // Header
-                    HStack {
+                    HStack(spacing: 12) {
+                        Image("DriveArmorLogo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 44, height: 44)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+
                         VStack(alignment: .leading, spacing: 4) {
                             Text("DriveArmor")
                                 .font(.largeTitle.bold())

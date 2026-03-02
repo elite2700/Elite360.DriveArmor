@@ -13,10 +13,13 @@ struct SignUpView: View {
         ScrollView {
             VStack(spacing: 24) {
                 // MARK: - Header
-                VStack(spacing: 8) {
-                    Image(systemName: "person.crop.circle.badge.plus")
-                        .font(.system(size: 52))
-                        .foregroundStyle(.accent)
+                VStack(spacing: 12) {
+                    Image("DriveArmorLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80)
+                        .clipShape(RoundedRectangle(cornerRadius: 18))
+                        .shadow(color: .accentColor.opacity(0.2), radius: 6, y: 3)
 
                     Text("Create Account")
                         .font(.title2.bold())

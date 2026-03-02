@@ -14,10 +14,13 @@ struct LoginView: View {
             Spacer()
 
             // MARK: - Logo / Title
-            VStack(spacing: 8) {
-                Image(systemName: "car.front.waves.up.fill")
-                    .font(.system(size: 64))
-                    .foregroundStyle(.accent)
+            VStack(spacing: 12) {
+                Image("DriveArmorLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .clipShape(RoundedRectangle(cornerRadius: 24))
+                    .shadow(color: .accentColor.opacity(0.3), radius: 8, y: 4)
 
                 Text("DriveArmor")
                     .font(.largeTitle.bold())
