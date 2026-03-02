@@ -174,7 +174,7 @@ final class SubscriptionService: ObservableObject {
 
     // MARK: - Helpers
 
-    private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+    private nonisolated func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
         case .unverified:
             throw SubscriptionError.failedVerification
