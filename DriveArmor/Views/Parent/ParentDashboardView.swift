@@ -42,35 +42,23 @@ struct ParentDashboardView: View {
 
                 // MARK: - Quick Actions Grid
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                    QuickActionCard(icon: "mappin.and.ellipse", title: "Geofences", color: .blue) {
-                        NavigationLink(destination: GeofenceListView()) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: GeofenceListView()) {
+                        QuickActionLabel(icon: "mappin.and.ellipse", title: "Geofences", color: .blue)
                     }
-                    QuickActionCard(icon: "clock.badge.checkmark", title: "Schedules", color: .purple) {
-                        NavigationLink(destination: ScheduleListView()) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: ScheduleListView()) {
+                        QuickActionLabel(icon: "clock.badge.checkmark", title: "Schedules", color: .purple)
                     }
-                    QuickActionCard(icon: "speedometer", title: "Speed Alerts", color: .orange) {
-                        NavigationLink(destination: SpeedThresholdView()) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: SpeedThresholdView()) {
+                        QuickActionLabel(icon: "speedometer", title: "Speed Alerts", color: .orange)
                     }
-                    QuickActionCard(icon: "hand.raised.fill", title: "Override Requests", color: .red) {
-                        NavigationLink(destination: OverrideRequestsView()) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: OverrideRequestsView()) {
+                        QuickActionLabel(icon: "hand.raised.fill", title: "Override Requests", color: .red)
                     }
-                    QuickActionCard(icon: "doc.badge.gearshape", title: "Rule Changes", color: .teal) {
-                        NavigationLink(destination: RuleChangeRequestView()) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: RuleChangeRequestView()) {
+                        QuickActionLabel(icon: "doc.badge.gearshape", title: "Rule Changes", color: .teal)
                     }
-                    QuickActionCard(icon: "qrcode", title: "QR Pairing", color: .indigo) {
-                        NavigationLink(destination: QRCodePairingView(pairingCode: appState.currentFamily?.pairingCode ?? "")) {
-                            EmptyView()
-                        }
+                    NavigationLink(destination: QRCodePairingView(pairingCode: appState.currentFamily?.pairingCode ?? "")) {
+                        QuickActionLabel(icon: "qrcode", title: "QR Pairing", color: .indigo)
                     }
                 }
                 .padding(.horizontal)
@@ -227,31 +215,27 @@ private struct StatusBadge: View {
     }
 }
 
-// MARK: - Quick Action Card
+// MARK: - Quick Action Label
 
-private struct QuickActionCard<Destination: View>: View {
+private struct QuickActionLabel: View {
     let icon: String
     let title: String
     let color: Color
-    @ViewBuilder let destination: () -> Destination
 
     var body: some View {
-        ZStack {
-            destination()
-            VStack(spacing: 8) {
-                Image(systemName: icon)
-                    .font(.title2)
-                    .foregroundStyle(color)
-                Text(title)
-                    .font(.caption.bold())
-                    .foregroundStyle(.primary)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(color.opacity(0.08))
-            )
+        VStack(spacing: 8) {
+            Image(systemName: icon)
+                .font(.title2)
+                .foregroundStyle(color)
+            Text(title)
+                .font(.caption.bold())
+                .foregroundStyle(.primary)
         }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(color.opacity(0.08))
+        )
     }
 }
