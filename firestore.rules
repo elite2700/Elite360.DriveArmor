@@ -1,0 +1,66 @@
+// Firestore Security Rules for DriveArmor
+// Deploy via Firebase Console → Firestore → Rules, or with:
+//   firebase deploy --only firestore:rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helpers ──────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return request.auth.uid == uid;
+    }
+
+    function isFamilyParent(familyId) {
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/families/$(familyId)).data.parentId == request.auth.uid;
+    }
+
+    function isFamilyMember(familyId) {
+      let family = get(/databases/$(database)/documents/families/$(familyId)).data;
+      return isSignedIn() &&
+        (family.parentId == request.auth.uid || request.auth.uid in family.childIds);
+    }
+
+    // ── Users ────────────────────────────────────────────────
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create: if isOwner(userId);
+      allow update: if isOwner(userId);
+      allow delete: if false;
+    }
+
+    // ── Families ─────────────────────────────────────────────
+    match /families/{familyId} {
+      allow read: if isFamilyMember(familyId);
+      allow create: if isSignedIn();
+      allow update: if isFamilyParent(familyId) || isFamilyMember(familyId);
+      allow delete: if isFamilyParent(familyId);
+
+      // Commands subcollection
+      match /commands/{commandId} {
+        allow read: if isFamilyMember(familyId);
+        allow create: if isFamilyParent(familyId);
+        allow update: if isFamilyMember(familyId);  // child can ack/complete
+        allow delete: if isFamilyParent(familyId);
+      }
+
+      // Device Status subcollection
+      match /deviceStatus/{childId} {
+        allow read: if isFamilyMember(familyId);
+        allow write: if isOwner(childId) && isFamilyMember(familyId);
+      }
+
+      // Driving Logs subcollection
+      match /drivingLogs/{logId} {
+        allow read: if isFamilyMember(familyId);
+        allow create: if isFamilyMember(familyId);
+        allow update, delete: if isFamilyParent(familyId);
+      }
+    }
+  }
+}

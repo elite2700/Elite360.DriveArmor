@@ -1,0 +1,75 @@
+name: DriveArmor
+options:
+  bundleIdPrefix: com.elite360
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "17.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1"  # iPhone only
+    INFOPLIST_FILE: DriveArmor/Resources/Info.plist
+    CODE_SIGN_ENTITLEMENTS: DriveArmor/DriveArmor.entitlements
+    DEVELOPMENT_TEAM: ""  # Set your team ID
+    PRODUCT_BUNDLE_IDENTIFIER: com.elite360.DriveArmor
+
+targets:
+  DriveArmor:
+    type: application
+    platform: iOS
+    sources:
+      - path: DriveArmor
+        excludes:
+          - "**/*.plist"
+    resources:
+      - path: DriveArmor/Resources/Assets.xcassets
+      - path: DriveArmor/Resources/GoogleService-Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: DriveArmor/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: DriveArmor/DriveArmor.entitlements
+    dependencies:
+      - pod: FirebaseAuth
+      - pod: FirebaseFirestore
+      - pod: FirebaseMessaging
+    preBuildScripts: []
+
+  DriveArmorTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - DriveArmorTests
+    dependencies:
+      - target: DriveArmor
+    settings:
+      base:
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/DriveArmor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriveArmor"
+
+  DriveArmorUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - DriveArmorUITests
+    dependencies:
+      - target: DriveArmor
+
+schemes:
+  DriveArmor:
+    build:
+      targets:
+        DriveArmor: all
+        DriveArmorTests: [test]
+        DriveArmorUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - DriveArmorTests
+        - DriveArmorUITests
+    archive:
+      config: Release

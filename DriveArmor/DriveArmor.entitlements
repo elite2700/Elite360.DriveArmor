@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Push Notifications -->
+    <key>aps-environment</key>
+    <string>development</string>
+
+    <!-- Background Modes -->
+    <key>com.apple.developer.background-modes</key>
+    <array>
+        <string>fetch</string>
+        <string>location</string>
+        <string>processing</string>
+        <string>remote-notification</string>
+    </array>
+
+    <!-- Family Controls (for Screen Time API, if applicable) -->
+    <!-- Uncomment when Family Controls entitlement is approved by Apple:
+    <key>com.apple.developer.family-controls</key>
+    <true/>
+    -->
+</dict>
+</plist>
