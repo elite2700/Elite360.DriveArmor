@@ -8,7 +8,7 @@ import Foundation
 import Combine
 import FirebaseFirestore
 
-final class OverrideRequestService {
+final class OverrideRequestService: ObservableObject {
 
     private let db = Firestore.firestore()
 

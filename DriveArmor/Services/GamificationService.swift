@@ -7,7 +7,7 @@
 import Foundation
 import FirebaseFirestore
 
-final class GamificationService {
+final class GamificationService: ObservableObject {
 
     private let db = Firestore.firestore()
 

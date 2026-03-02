@@ -39,7 +39,7 @@ struct GamificationView: View {
 
     private func statsHeader(_ p: GamificationProfile) -> some View {
         HStack(spacing: 0) {
-            StatBubble(value: "\(p.points)", label: "Points", icon: "star.fill", color: .yellow)
+            StatBubble(value: "\(p.totalPoints)", label: "Points", icon: "star.fill", color: .yellow)
             StatBubble(value: "\(p.totalDrives)", label: "Drives", icon: "car.fill", color: .blue)
             StatBubble(value: "\(p.safeDrives)", label: "Safe", icon: "checkmark.shield.fill", color: .green)
             StatBubble(value: p.totalDrives > 0 ? "\(Int(Double(p.safeDrives) / Double(p.totalDrives) * 100))%" : "–",
@@ -89,7 +89,7 @@ struct GamificationView: View {
                 GridItem(.flexible())
             ], spacing: 16) {
                 ForEach(BadgeType.allCases, id: \.self) { type in
-                    let earned = profile?.badges.first(where: { $0.type == type })
+                    let earned = profile?.badges.first(where: { BadgeType(rawValue: $0.id) == type })
                     BadgeCell(type: type, earned: earned != nil, earnedDate: earned?.earnedAt)
                 }
             }

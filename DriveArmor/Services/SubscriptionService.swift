@@ -99,7 +99,7 @@ final class SubscriptionService: ObservableObject {
     func refreshSubscriptionStatus() async {
         var highestTier: SubscriptionTier = .free
 
-        for await result in Transaction.currentEntitlements {
+        for await result in StoreKit.Transaction.currentEntitlements {
             if let transaction = try? checkVerified(result) {
                 let tier = tierForProductId(transaction.productID)
                 if tier > highestTier {
@@ -163,7 +163,7 @@ final class SubscriptionService: ObservableObject {
 
     private func listenForTransactions() -> Task<Void, Error> {
         Task.detached { [weak self] in
-            for await result in Transaction.updates {
+            for await result in StoreKit.Transaction.updates {
                 if let transaction = try? self?.checkVerified(result) {
                     await self?.updateSubscriptionFromTransaction(transaction)
                     await transaction.finish()
@@ -183,7 +183,7 @@ final class SubscriptionService: ObservableObject {
         }
     }
 
-    private func updateSubscriptionFromTransaction(_ transaction: Transaction) async {
+    private func updateSubscriptionFromTransaction(_ transaction: StoreKit.Transaction) async {
         let tier = tierForProductId(transaction.productID)
         currentTier = tier
         subscriptionStatus = SubscriptionStatus(
