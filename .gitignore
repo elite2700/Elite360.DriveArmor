@@ -10,8 +10,8 @@ build/
 *.dSYM
 
 # CocoaPods
-Pods/
-*.xcworkspace
+# Pods/ is checked in so the project works without running pod install
+# *.xcworkspace is checked in for the same reason
 
 # Swift Package Manager
 .build/
