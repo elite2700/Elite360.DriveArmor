@@ -146,7 +146,7 @@ private struct BadgeCell: View {
                     .font(.title2)
                     .foregroundStyle(earned ? type.color : .gray.opacity(0.35))
             }
-            Text(type.displayName)
+            Text(type.name)
                 .font(.caption2.bold())
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
@@ -164,30 +164,6 @@ private struct BadgeCell: View {
 // MARK: - BadgeType helpers
 
 extension BadgeType {
-    var displayName: String {
-        switch self {
-        case .firstDrive:        return "First Drive"
-        case .safeWeek:          return "Safe Week"
-        case .safeMonth:         return "Safe Month"
-        case .noDistractions10:  return "No Distractions 10"
-        case .speedCompliant50:  return "Speed Star 50"
-        case .safeModeChampion:  return "Safe Mode Champ"
-        case .streakMaster:      return "Streak Master"
-        }
-    }
-
-    var icon: String {
-        switch self {
-        case .firstDrive:        return "car.fill"
-        case .safeWeek:          return "calendar.badge.checkmark"
-        case .safeMonth:         return "moon.stars.fill"
-        case .noDistractions10:  return "eye.slash.fill"
-        case .speedCompliant50:  return "speedometer"
-        case .safeModeChampion:  return "shield.checkered"
-        case .streakMaster:      return "flame.fill"
-        }
-    }
-
     var color: Color {
         switch self {
         case .firstDrive:        return .blue
