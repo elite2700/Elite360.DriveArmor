@@ -43,7 +43,7 @@ struct SafeModeOverlayView: View {
                         Text("From your parent:")
                             .font(.caption)
                             .foregroundStyle(.white.opacity(0.6))
-                        Text(""\(message)"")
+                        Text("\u{201C}\(message)\u{201D}")
                             .font(.body.italic())
                             .foregroundStyle(.white.opacity(0.9))
                             .multilineTextAlignment(.center)
