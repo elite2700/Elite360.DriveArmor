@@ -11,6 +11,10 @@ import FirebaseFirestore
 final class OverrideRequestService: ObservableObject {
 
     private let db = Firestore.firestore()
+    @Published var overrideRequests: [OverrideRequest] = []
+    @Published var ruleChangeRequests: [RuleChangeRequest] = []
+    private var overrideListener: ListenerRegistration?
+    private var ruleChangeListener: ListenerRegistration?
 
     private func overrideRef(familyId: String) -> CollectionReference {
         db.collection("families").document(familyId).collection("overrideRequests")
@@ -137,5 +141,40 @@ final class OverrideRequestService: ObservableObject {
         return subject
             .handleEvents(receiveCancel: { listener.remove() })
             .eraseToAnyPublisher()
+    }
+
+    // MARK: - Direct Listeners (populate @Published)
+
+    /// Start listening for override requests and publish to @Published property.
+    func listenForOverrideRequests(familyId: String) {
+        overrideListener?.remove()
+        overrideListener = overrideRef(familyId: familyId)
+            .order(by: "createdAt", descending: true)
+            .addSnapshotListener { [weak self] snapshot, _ in
+                let requests = snapshot?.documents.compactMap { doc in
+                    OverrideRequest.from(dictionary: doc.data(), id: doc.documentID)
+                } ?? []
+                DispatchQueue.main.async { self?.overrideRequests = requests }
+            }
+    }
+
+    /// Start listening for rule change requests and publish to @Published property.
+    func listenForRuleChangeRequests(familyId: String) {
+        ruleChangeListener?.remove()
+        ruleChangeListener = ruleChangeRef(familyId: familyId)
+            .order(by: "createdAt", descending: true)
+            .addSnapshotListener { [weak self] snapshot, _ in
+                let requests = snapshot?.documents.compactMap { doc in
+                    RuleChangeRequest.from(dictionary: doc.data(), id: doc.documentID)
+                } ?? []
+                DispatchQueue.main.async { self?.ruleChangeRequests = requests }
+            }
+    }
+
+    func stopListening() {
+        overrideListener?.remove()
+        ruleChangeListener?.remove()
+        overrideListener = nil
+        ruleChangeListener = nil
     }
 }

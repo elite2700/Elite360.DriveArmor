@@ -37,21 +37,16 @@ struct OverrideRequestsView: View {
         .navigationTitle("Override Requests")
         .task {
             guard let fId = appState.familyId else { return }
-            if isParent {
-                service.listenForPendingRequests(familyId: fId)
-            } else if let uid = appState.userId {
-                service.listenForChildRequests(familyId: fId, childId: uid)
-            }
+            service.listenForOverrideRequests(familyId: fId)
         }
     }
 
     private func respond(_ request: OverrideRequest, approved: Bool) async {
         guard let fId = appState.familyId else { return }
         try? await service.respondToOverrideRequest(
-            request,
-            approved: approved,
             familyId: fId,
-            respondedBy: appState.userId ?? ""
+            requestId: request.id,
+            approved: approved
         )
     }
 }
@@ -69,7 +64,7 @@ private struct OverrideRequestRow: View {
             HStack {
                 statusBadge
                 Spacer()
-                Text(request.requestedAt.formatted(date: .abbreviated, time: .shortened))
+                Text(request.createdAt.formatted(date: .abbreviated, time: .shortened))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

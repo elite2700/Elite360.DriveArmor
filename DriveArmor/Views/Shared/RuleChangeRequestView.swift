@@ -47,10 +47,16 @@ struct RuleChangeRequestView: View {
         }
         .sheet(isPresented: $showNewRequest) {
             NavigationStack {
-                NewRuleChangeView { request in
+                NewRuleChangeView { requestType, message in
                     Task {
-                        guard let fId = appState.familyId else { return }
-                        try? await service.submitRuleChangeRequest(request, familyId: fId)
+                        guard let fId = appState.familyId,
+                              let uid = appState.userId else { return }
+                        _ = try? await service.sendRuleChangeRequest(
+                            familyId: fId,
+                            childId: uid,
+                            requestType: requestType,
+                            message: message
+                        )
                     }
                 }
             }
@@ -64,10 +70,9 @@ struct RuleChangeRequestView: View {
     private func respond(_ request: RuleChangeRequest, approved: Bool) async {
         guard let fId = appState.familyId else { return }
         try? await service.respondToRuleChangeRequest(
-            request,
-            approved: approved,
             familyId: fId,
-            respondedBy: appState.userId ?? ""
+            requestId: request.id,
+            approved: approved
         )
     }
 }
@@ -85,20 +90,17 @@ private struct RuleChangeRow: View {
             HStack {
                 statusBadge
                 Spacer()
-                Text(request.requestedAt.formatted(date: .abbreviated, time: .shortened))
+                Text(request.createdAt.formatted(date: .abbreviated, time: .shortened))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
 
-            Text(request.ruleDescription)
+            Text(request.requestType)
                 .font(.headline)
 
-            Text("Current: \(request.currentValue) \u{2192} Requested: \(request.requestedValue)")
+            Text(request.message)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-
-            Text(request.reason)
-                .font(.subheadline)
 
             if isParent && request.status == .pending {
                 HStack(spacing: 12) {
@@ -149,24 +151,19 @@ private struct RuleChangeRow: View {
 // MARK: - New Rule Change Sheet
 
 struct NewRuleChangeView: View {
-    let onSave: (RuleChangeRequest) -> Void
+    let onSave: (_ requestType: String, _ message: String) -> Void
 
-    @EnvironmentObject var appState: AppState
     @Environment(\.dismiss) private var dismiss
-    @State private var ruleDescription = ""
-    @State private var currentValue = ""
-    @State private var requestedValue = ""
-    @State private var reason = ""
+    @State private var requestType = ""
+    @State private var message = ""
 
     var body: some View {
         Form {
             Section("Rule") {
-                TextField("Which rule? (e.g. Speed limit threshold)", text: $ruleDescription)
-                TextField("Current value", text: $currentValue)
-                TextField("Requested value", text: $requestedValue)
+                TextField("Which rule? (e.g. Speed limit, Schedule)", text: $requestType)
             }
-            Section("Reason") {
-                TextEditor(text: $reason)
+            Section("Details") {
+                TextEditor(text: $message)
                     .frame(minHeight: 80)
             }
         }
@@ -178,28 +175,12 @@ struct NewRuleChangeView: View {
             }
             ToolbarItem(placement: .confirmationAction) {
                 Button("Submit") {
-                    submit()
+                    onSave(requestType, message)
                     dismiss()
                 }
-                .disabled(ruleDescription.isEmpty || reason.isEmpty)
+                .disabled(requestType.isEmpty || message.isEmpty)
             }
         }
-    }
-
-    private func submit() {
-        let request = RuleChangeRequest(
-            id: UUID().uuidString,
-            childId: appState.userId ?? "",
-            ruleDescription: ruleDescription,
-            currentValue: currentValue,
-            requestedValue: requestedValue,
-            reason: reason,
-            status: .pending,
-            requestedAt: Date(),
-            respondedAt: nil,
-            respondedBy: nil
-        )
-        onSave(request)
     }
 }
 
