@@ -220,7 +220,8 @@ struct ChildDashboardView: View {
         .onChange(of: viewModel.isDriving) { wasDriving, isDriving in
             if wasDriving && !isDriving {
                 // Drive ended — record for gamification
-                viewModel.recordDriveEnd(wasSafe: !viewModel.safeModeActive)
+                let log = DrivingLog(childId: appState.userId ?? "")
+                viewModel.recordDriveEnd(log: log)
             }
         }
     }
